@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        :root {
+            --primary-blue: #2874f0;
+            --light-bg: #f5f5f5;
+            --fixed-color: #333;
+            --user-color: #007bff;
+            --error-color: #dc3545;
+            --success-color: #28a745;
+            --border-light: #ccc;
+            --border-dark: #000;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 90%;
+            width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-blue);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        #sudoku-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            border: 3px solid var(--border-dark);
+            width: 100%;
+            aspect-ratio: 1 / 1; 
+            margin: 0 auto;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: background-color 0.1s;
+            user-select: none;
+        }
+
+        .cell:nth-child(3n) {
+            border-right-width: 2px;
+            border-right-color: var(--border-dark);
+        }
+        .cell:nth-child(9n) {
+            border-right-width: 1px; /* Reset on the last column */
+            border-right-color: var(--border-light);
+        }
+        .cell:nth-child(n) { border-bottom: 1px solid var(--border-light); }
+        .cell:nth-child(27n) { border-bottom-width: 2px; border-bottom-color: var(--border-dark); }
+        .cell:nth-child(54n) { border-bottom-width: 2px; border-bottom-color: var(--border-dark); }
+        .cell:nth-child(81n) { border-bottom-width: 1px; border-bottom-color: var(--border-light); }
+
+
+        .cell.fixed {
+            color: var(--fixed-color);
+            background-color: #eee;
+            cursor: default;
+        }
+
+        .cell:not(.fixed) {
+            color: var(--user-color);
+        }
+
+        /* State Styles */
+        .cell.selected {
+            background-color: #ffda6a; /* Highlight selected cell */
+        }
+        .cell.highlight {
+            background-color: #fff9e6; /* Highlight cells in the same row/col/box */
+        }
+        .cell.error {
+            background-color: #ffdddd !important;
+            color: var(--error-color) !important;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn {
+            flex: 0 0 calc(10% - 8px); /* 9 buttons + clear/check = 11 items. 9 fit nicely */
+            height: 40px;
+            min-width: 40px;
+            background-color: #fff;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover:not(:disabled) {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active:not(:disabled) {
+            transform: translateY(0);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-action {
+            flex: 1 1 100px;
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .btn-action.clear-btn {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        /* --- Message Box --- */
+        #message-box {
+            min-height: 20px;
+            text-align: center;
+            font-weight: 600;
+            padding: 10px 0;
+            border-radius: 6px;
+        }
+        .message-success {
+            color: var(--success-color);
+            background-color: #d4edda;
+            border: 1px solid #404441;
+        }
+        .message-error {
+            color: var(--error-color);
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            .btn {
+                flex: 0 0 calc(14.28% - 8px); /* 7 buttons per row on smaller screens */
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sudoku Challenge</h1>
+        
+        <div id="sudoku-grid">
+            <!-- Cells will be generated here by JavaScript -->
+        </div>
+
+        <div id="message-box"></div>
+
+        <div class="controls">
+            <!-- Number Input Buttons -->
+            <button class="btn" onclick="handleNumberInput(1)">1</button>
+            <button class="btn" onclick="handleNumberInput(2)">2</button>
+            <button class="btn" onclick="handleNumberInput(3)">3</button>
+            <button class="btn" onclick="handleNumberInput(4)">4</button>
+            <button class="btn" onclick="handleNumberInput(5)">5</button>
+            <button class="btn" onclick="handleNumberInput(6)">6</button>
+            <button class="btn" onclick="handleNumberInput(7)">7</button>
+            <button class="btn" onclick="handleNumberInput(8)">8</button>
+            <button class="btn" onclick="handleNumberInput(9)">9</button>
+            
+            <!-- Action Buttons -->
+            <button class="btn btn-action clear-btn" onclick="clearSelectedCell()">Clear</button>
+            <button class="btn btn-action" onclick="checkBoard()">Check Board</button>
+        </div>
+    </div>
+
+    <script>
+        // --- Sudoku Game Logic ---
+
+        // State variables
+        let selectedCell = null;
+        let selectedRow = -1;
+        let selectedCol = -1;
+        let userBoard = [];
+        let initialBoard = [];
+        
+        // A solvable puzzle (0 represents empty cells)
+        const puzzleData = [
+            [5, 3, 0, 0, 7, 0, 0, 0, 0],
+            [6, 0, 0, 1, 9, 5, 0, 0, 0],
+            [0, 9, 8, 0, 0, 0, 0, 6, 0],
+            [8, 0, 0, 0, 6, 0, 0, 0, 3],
+            [4, 0, 0, 8, 0, 3, 0, 0, 1],
+            [7, 0, 0, 0, 2, 0, 0, 0, 6],
+            [0, 6, 0, 0, 0, 0, 2, 8, 0],
+            [0, 0, 0, 4, 1, 9, 0, 0, 5],
+            [0, 0, 0, 0, 8, 0, 0, 7, 9]
+        ];
+
+        const gridElement = document.getElementById('sudoku-grid');
+        const messageBox = document.getElementById('message-box');
+
+        function initGame() {
+            // Deep copy the initial puzzle to both internal boards
+            initialBoard = puzzleData.map(row => [...row]);
+            userBoard = puzzleData.map(row => [...row]);
+
+            gridElement.innerHTML = ''; // Clear previous grid
+            
+            for (let r = 0; r < 9; r++) {
+                for (let c = 0; c < 9; c++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    cell.dataset.row = r;
+                    cell.dataset.col = c;
+                    
+                    const value = initialBoard[r][c];
+                    
+                    if (value !== 0) {
+                        cell.textContent = value;
+                        cell.classList.add('fixed');
+                    }
+                    
+                    // Attach click listener only for non-fixed cells
+                    if (value === 0) {
+                        cell.addEventListener('click', () => selectCell(cell));
+                    }
+                    
+                    gridElement.appendChild(cell);
+                }
+            }
+            showMessage("Ready to play! Select an empty cell to start.");
+        }
+
+        function selectCell(cell) {
+            // Clear previous selection and highlights
+            document.querySelectorAll('.cell').forEach(c => {
+                c.classList.remove('selected', 'highlight', 'error');
+            });
+
+            // Set new selected cell
+            selectedCell = cell;
+            selectedRow = parseInt(cell.dataset.row);
+            selectedCol = parseInt(cell.dataset.col);
+            
+            cell.classList.add('selected');
+            
+            // Highlight cells in the same row/col/box
+            highlightRelatedCells(selectedRow, selectedCol);
+        
+            messageBox.textContent = '';
+            messageBox.className = ''; 
+        }
+        
+        function highlightRelatedCells(r, c) {
+            const cells = gridElement.querySelectorAll('.cell');
+            const boxStartRow = r - (r % 3);
+            const boxStartCol = c - (c % 3);
+
+            cells.forEach(cell => {
+                const row = parseInt(cell.dataset.row);
+                const col = parseInt(cell.dataset.col);
+
+                // Highlight same row or column
+                if (row === r || col === c) {
+                    cell.classList.add('highlight');
+                }
+                
+                // Highlight same 3x3 box
+                if (row >= boxStartRow && row < boxStartRow + 3 && 
+                    col >= boxStartCol && col < boxStartCol + 3) {
+                    cell.classList.add('highlight');
+                }
+            });
+            
+            // Ensure the selected cell remains 'selected'
+            selectedCell.classList.add('selected');
+        }
+
+        function handleNumberInput(num) {
+            if (!selectedCell) {
+                showMessage("Please select an empty cell first.", true);
+                return;
+            }
+            
+            // Cell is selected, update internal board and UI
+            userBoard[selectedRow][selectedCol] = num;
+            selectedCell.textContent = num;
+            
+            // Clear previous error state
+            selectedCell.classList.remove('error');
+            
+            showMessage(`Value ${num} placed at Row ${selectedRow + 1}, Col ${selectedCol + 1}.`, false);
+        }
+        
+             function clearSelectedCell() {
+            if (!selectedCell) {
+                showMessage("Please select a cell to clear.", true);
+                return;
+            }
+            
+            userBoard[selectedRow][selectedCol] = 0;
+            selectedCell.textContent = '';
+            selectedCell.classList.remove('error');
+            
+            showMessage(`Cell cleared.`, false);
+        }
+
+        function isValidMove(r, c, val) {
+            if (val === 0) return true; 
+
+            for (let i = 0; i < 9; i++) {
+                if (i !== c && userBoard[r][i] === val) return false;
+                if (i !== r && userBoard[i][c] === val) return false;
+            }
+
+            const boxStartRow = r - (r % 3);
+            const boxStartCol = c - (c % 3);
+
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    const currentRow = boxStartRow + i;
+                    const currentCol = boxStartCol + j;
+
+                    if (currentRow !== r || currentCol !== c) {
+                        if (userBoard[currentRow][currentCol] === val) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        function checkBoard() {
+            let isBoardComplete = true;
+            let isBoardCorrect = true;
+
+            gridElement.querySelectorAll('.cell').forEach(c => c.classList.remove('error'));
+
+            for (let r = 0; r < 9; r++) {
+                for (let c = 0; c < 9; c++) {
+                    const val = userBoard[r][c];
+                    const cellElement = gridElement.querySelector(`[data-row="${r}"][data-col="${c}"]`);
+
+                    if (val === 0) {
+                        isBoardComplete = false;
+                        continue;
+                    }
+
+                    if (!checkSpecificCell(r, c, val)) {
+                        cellElement.classList.add('error');
+                        isBoardCorrect = false;
+                    }
+                }
+            }
+
+            if (!isBoardComplete) {
+                showMessage("Board is incomplete. Keep going!", isBoardCorrect ? false : true);
+            } else if (isBoardCorrect) {
+                showMessage("Congratulations! The puzzle is solved correctly!", false);
+            } else {
+                showMessage("There are incorrect numbers on the board. Errors are highlighted in red.", true);
+            }
+        }
+        
+        function checkSpecificCell(r, c, val) {
+            // Check row and column
+            for (let i = 0; i < 9; i++) {
+                if (i !== c && userBoard[r][i] === val) return false; // Row conflict
+                if (i !== r && userBoard[i][c] === val) return false; // Column conflict
+            }
+
+            // Check 3x3 box
+            const boxStartRow = r - (r % 3);
+            const boxStartCol = c - (c % 3);
+
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    const currentRow = boxStartRow + i;
+                    const currentCol = boxStartCol + j;
+
+                    if (currentRow !== r || currentCol !== c) {
+                        if (userBoard[currentRow][currentCol] === val) {
+                            return false; 
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        function showMessage(text, isError = false) {
+            messageBox.textContent = text;
+            messageBox.className = isError ? 'message-box message-error' : (text ? 'message-box message-success' : '');
+            if (!text) {
+                 messageBox.className = '';
+            }
+        }
+
+        window.onload = initGame;
+    </script>
+</body>
+</html>

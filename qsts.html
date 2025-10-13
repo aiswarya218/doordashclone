@@ -1,0 +1,64 @@
+1.Data types in js
+   primitive - string, bigint, undefined, null, symbol, number, boolean 
+   non-primitive - object - store collection of data, multiple and complex 
+   
+   String: series of characters
+           var str ="Vivek Obroyi";     var str2 ='Johnny';
+   Number: decimal or non-decimal 
+           var x=3;
+   BogInt: store numbers above limitation of number data types
+           var bigInteger = 3562377287788837468291982943434443334
+   Boolean: logical entity, true or false, conditional testing 
+            var a=2;  var b=4;  (a==b)    //returns false
+   Undefined: declared but not assigned, undefined
+            var x;    var y = undefined;
+   Symbol: new datatype in ES6 version of js, store anoymous and unique value
+           var symbol1 = Symbol('symbol');
+
+2.Hoisting
+   default behaviour of js where all variable and fns declarations are moved on top. 
+   irrespective of where variables and fns are declared, moved on top of scope (local and global)
+   Eg:  hoistedFunction();
+        function hoistedFunction() {
+            console.log("Hello world!");
+        }   //"Hello world!"  even when fn declared after calling
+
+3. == and ===
+    Comparison Operators
+    == compare values          === compare both values and types
+
+
+4. Implicit Type Coercion 
+     Automatic conversion of value from one data type to another when operands are of different data types
+         String Coercion - while using the '+' operator.
+
+5. Passed by value and passed by reference
+    primitive are passed by value and non-primitive are passed by reference
+
+6. Closures in js
+    A fn that has access to parent scope, after parent fn has closed.
+
+    function myCounter() {
+          let counter = 0;
+          return function() {
+          counter++;
+          return counter;
+    };
+  }
+        const add = myCounter();
+        add();
+        add();
+        add();
+        <!-- counter is now 3 -->
+  
+
+
+
+
+
+
+
+<!-- object pbl, changes, array from obj , queue airport ,vcode ,2 arrays to one no sorting method, object make new and changes
+     print website, library -->
+     <!-- hacker rank, w3c school -->
+

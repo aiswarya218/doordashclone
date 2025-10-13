@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-logo">
+            <a href="/" class="logo"><img src="./images/filpkart.png" width="75" class="logoimg"/>
+                <span class="logo-plus">Explore 
+                    <span class="plus-text">Plus</span>
+                <img src="./images/plus_aef861.png" width="10" />
+                </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="auth-nav">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="seller-btn">Become a Seller</a>
+                <a href="#" class="more-btn">More<i class="fas fa-chevron-down custom-icon-size"></i></a>
+                <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </nav>
+        </div>
+        </header>
+
+        <nav class="main-categories">
+            <ul>
+                <li><a href="#">Electronics <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">TVs & Appliances <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Men <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Women <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Baby & Kids <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Home & Furniture <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Sports, Books & More <i class="fas fa-chevron-down custom-icon-size"></i></a></li>
+                <li><a href="#">Flights </a>
+                <li><a href="#">Offer Zone</a></li>
+            </ul>
+        </nav>
+    <!-- </header> -->
+</div>
+      
+    <main class="page-container">
+        <div class="content-wrapper">
+            <aside class="filters-sidebar">
+                <h2>Filters</h2>
+                <div class="filter-group category-filter">
+                    <h3>CATEGORIES</h3>
+                    <p><i class="fas fa-chevron-left"></i> Mobiles & Accessories</p>
+                    <p class="active-filter">Mobiles</p>
+                </div>
+
+                <div class="filter-group network-type">
+                    <Span class="header-text">NETWORK TYPE</span>
+                     <ul>
+                        <li><input type="checkbox"> 2G</li>
+                        <li><input type="checkbox"> 3G</li>
+                        <li><input type="checkbox"> 4G</li>
+                        </ul>
+                    </div>
+
+                <div class="filter-group ram-filter">
+                    <span class="header-text">RAM</span>
+                    <ul>
+                        <li><input type="checkbox"> 4 GB</li>
+                        <li><input type="checkbox"> 3 GB</li>
+                        <li><input type="checkbox"> 2 GB</li>
+                        </ul>
+                </div>
+                
+         <div class="filter-sidebar">
+    <div class="price-filter-section">
+        <div class="filter-header">
+            <span class="header-text">PRICE</span>
+        </div>
+
+        <div class="price-slider-container">
+            <div class="custom-slider-track">
+                <div class="slider-active-range"></div>
+                <div class="slider-thumb "></div>
+                <div class="slider-thumb max-thumb"></div>
+            </div>
+
+            <div class="slider-marks">      
+                <span class="mark"></span>
+                <span class="mark"></span>
+                <span class="mark"></span>
+                <span class="mark"></span> 
+                <span class="mark"></span>
+                <span class="mark"></span>
+                <span class="mark"></span>
+            </div>
+        </div>
+
+        <div class="price-dropdowns">
+            <div class="dropdown-wrapper">
+                <select class="price-select min-select">
+                    <option value="min">Min</option>
+                    <option value="1000">₹10000</option>
+                    <option value="15000">₹15000</option>
+                    <option value="20000">₹20000</option>
+                    <option value="30000">₹30000</option>
+                    </select>
+                <span class="dropdown-arrow"><img src="./images/arrow.svg" /></span>
+            </div>
+
+            <span class="to-text">to</span>
+
+            <div class="dropdown-wrapper">
+                <select class="price-select max-select">
+                    <option value="30000">₹30000+</option>
+                    <option value="10000">₹10000</option>
+                    <option value="15000">₹15000</option>
+                    <option value="20000">₹20000</option>
+                    <option value="30000">₹30000</option>
+                    </select>
+                <span class="dropdown-arrow"><img src="./images/arrow.svg" /></span>
+                <script src="./script.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="filter-group brand-filter">
+                    <span class="header-text">BRAND</span>
+                    <div class="brand-search">
+                        <svg width="20" height="20" viewBox="0 0 17 18" class="searched" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
+                        <input type="text" placeholder="Search Brand">
+                    </div>
+                    <ul>
+                        <li><input type="checkbox"> Apple</li>
+                        <li><input type="checkbox"> Google</li>
+                        <li><input type="checkbox"> Motorola</li>
+                        <li><input type="checkbox"> vivo</li>
+                        <li><input type="checkbox"> Oppo</li>
+                        <li><input type="checkbox"> Infinix</li>
+                    </ul>
+                </div>
+
+                 <div class="filter-group ram-filter">
+                    <span class="header-text">INTERNAL STORAGE</span>
+                    <ul>
+                        <li><input type="checkbox"> 128 - 255.9 GB</li>
+                        <li><input type="checkbox"> 64 - 127.9 GB</li>
+                        <li><input type="checkbox"> 32 - 63.9 GB</li>
+                    </ul>
+                </div>
+
+                 <div class="filter-group ram-filter">
+                    <span class="header-text">BATTERY CAPACITY</span>
+                    <ul>
+                        <li><input type="checkbox"> 1000 - 1999 mAh</li>
+                        <li><input type="checkbox"> 2000 - 2999 mAh</li>
+                        <li><input type="checkbox"> 3000 - 3999 mAh</li>
+                    </ul>
+                </div>
+
+                 <div class="filter-group ram-filter">
+                    <span class="header-text">SIM TYPE</span>
+                    <ul>
+                        <li><input type="checkbox"> Dual Sim</li>
+                        <li><input type="checkbox"> Four Sim</li>
+                        <li><input type="checkbox"> Single Sim</li>
+                    </ul>
+                </div>
+
+                 <div class="filter-content">
+            <label class="filter-option">
+                <input type="checkbox" name="f-assured" class="checkbox-input">
+                <span class="checkbox-box"></span>
+                <span class="badge-text">
+                    <img src="./images/fa_9e47c1.png" height="21" alt="F-Assured Badge" class="f-assured-logo" />
+                </span>
+                <span class="help-icon" title="What is F-Assured?">&#x3F;</span>
+            </label>
+        </div>
+
+                 <div class="filter-group ram-filter">
+                    <span class="header-text">CUSTOMER RATINGS</span>
+                    <ul>
+                        <li><input type="checkbox"> 4★ & above</li>
+                        <li><input type="checkbox"> 3★ & above</li>
+                        <li><input type="checkbox"> 2★ & above</li>
+                    </ul>
+                </div>
+
+                     <div class="filter-group ram-filter">
+                    <span class="header-text">GST INVOICE AVAILABLE</span>
+                    <ul>
+                        <li><input type="checkbox"> GST Invoice Available</li>
+                    </ul>
+                </div>
+
+                     <div class="filter-group ram-filter">
+                    <span class="header-text">SCREEN SIZE</span>
+                    <ul>
+                        <li><input type="checkbox"> 5.7 - 5.9 inch</li>
+                        <li><input type="checkbox"> 5.5 - 5.6 inch</li>
+                        <li><input type="checkbox"> 4.5 - 4.9 inch</li>
+                    </ul>
+                </div>
+
+                     <div class="filter-group ram-filter">
+                    <span class="header-text">PRIMARY CAMERA</span>
+                    <ul>
+                        <li><input type="checkbox"> 5 - 7.9 MP</li>
+                        <li><input type="checkbox"> 8 - 11.9 MP</li>
+                        <li><input type="checkbox"> 12 - 12.9 MP</li>
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">SECONDARY CAMERA</span>
+                    <ul>
+                        <li><input type="checkbox"> 12 - 12.9 MP</li>
+                        <li><input type="checkbox"> 12 - 15.9  MP</li>
+                        <li><input type="checkbox"> 16 - 20.9 MP</li>
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">PROCESSOR BRAND</span>
+                    <ul>
+                        <li><input type="checkbox"> AMD</li>
+                        <li><input type="checkbox"> Apple</li>
+                        <li><input type="checkbox"> ARM</li>
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">SPECIALITY</span>
+                    <ul>
+                        <li><input type="checkbox"> Big Storage</li>
+                        <li><input type="checkbox"> Higher Performance</li>
+                        <li><input type="checkbox"> Long-Lasting Battery</li>
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">RESOLUTION TYPE</span>
+                    <ul>
+                        <li><input type="checkbox"> Full HD</li>
+                        <li><input type="checkbox"> Full HD+</li>
+                        <li><input type="checkbox"> FWVGA</li> 
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">OPERATING SYSTEM</span>
+                    <ul>
+                        <li><input type="checkbox"> Android</li>
+                        <li><input type="checkbox"> Blackberry</li>
+                        <li><input type="checkbox"> Firefox</li>
+                    </ul>
+                </div>
+
+                         <div class="filter-group ram-filter">
+                    <span class="header-text">OFFERS</span>
+                    <ul>
+                        <li><input type="checkbox"> Special Price</li>
+                        <li><input type="checkbox"> Buy More, Save More</li>
+                        <li><input type="checkbox"> No Cost EMI</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">FEATURES</span>
+                    <ul>
+                        <li><input type="checkbox"> WiFi</li>
+                        <li><input type="checkbox"> HD Recording</li>
+                        <li><input type="checkbox"> FM Player</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">TYPE</span>
+                    <ul>
+                        <li><input type="checkbox"> Smart Phones</li>
+                        <li><input type="checkbox"> Feature Phones</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">NUMBER OF CORES</span>
+                    <ul>
+                        <li><input type="checkbox"> Dual Core</li>
+                        <li><input type="checkbox"> Hexa Core</li>
+                        <li><input type="checkbox"> Octa Core</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">AVAILABILITY</span>
+                    <ul>
+                        <li><input type="checkbox"> Exclude Out of Stock</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">DISCOUNT</span>
+                    <ul>
+                        <li><input type="checkbox"> 50% or more</li>
+                        <li><input type="checkbox"> 40% or more</li>
+                        <li><input type="checkbox"> 30% or more</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">OPERATING SYSTEM VERSION NAME</span>
+                    <ul>
+                        <li><input type="checkbox"> Android Q</li>
+                        <li><input type="checkbox"> Anna</li>
+                        <li><input type="checkbox"> Belle</li>
+                    </ul>
+                </div>
+
+                            <div class="filter-group ram-filter">
+                    <span class="header-text">CLOCK SPEED</span>
+                    <ul>
+                        <li><input type="checkbox"> 1.5 - 1.9 GHz</li>
+                        <li><input type="checkbox"> 2 - 2.1 GHz</li>
+                        <li><input type="checkbox"> 2 - 2.5 GHz</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="product-results">
+ <div class="search-results-header-container">
+  <div class="left-panel">
+    <div class="breadcrumbs">
+      <span>Home</span> &rsaquo;
+      <span>Mobiles & Accessories</span> &rsaquo;
+      <span>Mobiles</span>
+    </div>
+  </div>
+  
+  <div class="right-panel">
+    <p class="results-summary">Showing 1 – 24 of 11,212 results for "mobile"</p>
+    
+    <div class="sort-options">
+      <span class="sort-label">Sort By</span>
+      <a href="#" class="sort-link active">Relevance</a>
+      <a href="#" class="sort-link">Popularity</a>
+      <a href="#" class="sort-link">Price -- Low to High</a>
+      <a href="#" class="sort-link">Price -- High to Low</a>
+      <a href="#" class="sort-link">Newest First</a>
+    </div>
+  </div>
+</div>
+
+     <!-- <div class="page-number-container">
+                <div class="page-number">
+                  <span>Page 1 of 89</span>
+                  <div id="pagination" class="pagination">
+                    <a href="" class="common-background" style="color: #fff;">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>  
+                    <a href="#">10</a>        
+                    <a href="#" class="Next-container">
+                    <span class="common-next">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>  -->
+              </div>
+            
+              <div class="login-page-container" id="login-page-is" style='display: none;'>        
+                <div class="loginPage-main">
+                  <button class="login-closeBtn" id="closeBtn">✕</button>
+                   <div class="main-login-conteiner">
+                    <div class="login-sec">
+                       <div class="blue-side">
+                          <span class="loginpage-login-text">Login</span>
+                          <p class="login-paragaraph">Get access to your Orders, Wishlist and Recommendations</p>
+                         </div>
+                         <div class="verification-side">     
+                           <div>
+                            <form action="#">
+                               <div class="mob-no-section">
+                                <input class="mob-input" placeholder="enter your mobile number" type="text" autocomplete="off">
+                               </div>
+                               <div class="continuing-text-area">
+                                By continuing, you agree to Flipkart's
+                                <a href="#">Terms of Use</a>
+                                 and
+                                 <a href="#">Privacy Policy</a>
+                                 . 
+                               </div>
+                               <div class="otp-btn">
+                                <button class="req-otp-btn">Request Otp</button>
+                               </div>
+                               <div class="create-account-text">
+                                <span class="#">New to Flipkart? Create an account</span>
+                               </div>       
+                            </form> 
+                           </div> 
+                      </div>
+                     </div>      
+                    </div>                                      
+                </div>
+              </div>
+            </div>
+          </div>                                               
+        </div>           
+
+        <footer>
+          <div class="footer-start">
+            <div class="main-footer-section">
+              <div class="footer-sections-container">
+                <div class="section-heading">
+                  <span>ABOUT</span>
+                  <a class="common-footer-text" href="#">Contact Us</a>
+                  <a class="common-footer-text" href="#">About Us</a>
+                  <a class="common-footer-text" href="#">Careers</a>
+                  <a class="common-footer-text" href="#">Flipkart Stories</a>
+                  <a class="common-footer-text" href="#">Press</a>
+                  <a class="common-footer-text" href="#">Corporate</a>
+                  <a class="common-footer-text" href="#">Information</a>
+                </div>
+              </div> 
+
+              <div class="footer-sections-container">
+                <div class="section-heading">
+                  <span>GROUP COMPANIES</span>
+                  <a class="common-footer-text" href="#">Myntra</a>
+                  <a class="common-footer-text" href="#">Cleartrip</a>
+                  <a class="common-footer-text" href="#">Shopsy</a>
+                </div>
+              </div>
+              <div class="footer-sections-container">
+                <div class="section-heading">
+                  <span>HELP</span>
+                  <a class="common-footer-text" href="#">Payments</a>
+                  <a class="common-footer-text" href="#">Shipping</a>
+                  <a class="common-footer-text" href="#">Cancellation & Returns</a>
+                  <a class="common-footer-text" href="#">FAQ</a>
+                </div>
+              </div>
+              <div class="footer-sections-container">
+                <div class="section-heading">
+                  <span>CONSUMER POLICY</span>
+                  <a class="common-footer-text" href="#">Cancellation & Returns</a>
+                  <a class="common-footer-text" href="#">Terms of Use</a>
+                  <a class="common-footer-text" href="#">Security</a>
+                  <a class="common-footer-text" href="#">Privacy</a>
+                  <a class="common-footer-text" href="#">Sitemap</a>
+                  <a class="common-footer-text" href="#">Grievance</a>
+                  <a class="common-footer-text" href="#">Redressa</a>
+                  <a class="common-footer-text" href="#">ERP</a>
+                  <a class="common-footer-text" href="#">Compliances</a>
+                </div>
+              </div>
+
+              <div class="mail-main-section">
+                <div class="mail-us-section">
+                  <span class="mail-us-heading">Mail Us</span>
+                </div>
+
+                <div class="mail-us-lists">
+                  <div class="details">
+                    <p>Flipkart Internet Private Limited, </p>
+                    <p> Buildings Alyssa, Begonia & </p>
+                    <p> Clove Embassy Tech Village, </p>
+                    <p> Outer Ring Road, Devarabeesanahalli Village, </p>
+                    <p> Bengaluru, 560103, </p>
+                    <p> Karnataka, India</p>
+                  </div>
+                </div>
+
+                <div class="mail-us-heading">Social </div>
+                <div class="social-networks-container">
+                  <span class="social-network-holder">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjkzMzEgMjFDMTcuOTAzNyAyMSAyMS45MzMxIDE2Ljk3MDYgMjEuOTMzMSAxMkMyMS45MzMxIDcuMDI5NDQgMTcuOTAzNyAzIDEyLjkzMzEgM0M3Ljk2MjU0IDMgMy45MzMxMSA3LjAyOTQ0IDMuOTMzMTEgMTJDMy45MzMxMSAxNi45NzA2IDcuOTYyNTQgMjEgMTIuOTMzMSAyMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY4MzEgOC4yNUgxNS4xODMxQzE0LjU4NjQgOC4yNSAxNC4wMTQxIDguNDg3MDUgMTMuNTkyMSA4LjkwOTAxQzEzLjE3MDIgOS4zMzA5NyAxMi45MzMxIDkuOTAzMjYgMTIuOTMzMSAxMC41VjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjkzMzExIDEzLjVIMTUuOTMzMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" height="24" width="24">
+                  </span>
+
+                  <span class="social-network-holder">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_183_20)">
+                        <path d="M13.5436 10.6179L20.0971 3H18.5441L12.8537 9.61448L8.30887 3H3.06689L9.93964 13.0023L3.06689 20.9908H4.61994L10.6291 14.0056L15.4288 20.9908H20.6708L13.5432 10.6179H13.5436ZM11.4165 13.0904L10.7202 12.0944L5.17953 4.16911H7.56491L12.0363 10.5651L12.7326 11.5611L18.5448 19.8748H16.1595L11.4165 13.0908V13.0904Z" fill="white"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_183_20">
+                          <rect x="3.06689" y="3" width="17.6039" height="18" rx="0.2" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span class="social-network-holder">
+                   <img src="./images/Screen Shot 2025-10-06 at 10.37.29.png" height="24" width="24">
+                  </span>
+
+                  <span class="social-network-holder">
+                   <img src="./images/Screen Shot 2025-10-06 at 10.39.14.png" height="20" width="20">
+                      <defs>
+                        <style>
+                          .st0 {
+                            fill: #212121;
+                          }
+
+                          .st1 {
+                            fill: #fff;
+                          }
+                        </style>
+                      </defs>
+                      <rect class="st0" width="24" height="24"></rect>
+                      <path class="st1" d="M8,12c0-2.21,1.8-4,4-4s4,1.8,4,4-1.8,4-4,4-4-1.8-4-4ZM5.83,12c0,3.41,2.76,6.17,6.17,6.17s6.17-2.76,6.17-6.17-2.76-6.17-6.17-6.17-6.17,2.76-6.17,6.17ZM16.97,5.59c0,.28.09.57.24.81.16.24.38.42.64.53s.55.14.84.09.53-.2.74-.39c.21-.21.34-.46.39-.74.05-.28.03-.57-.09-.84-.11-.26-.29-.49-.53-.64-.24-.16-.51-.24-.81-.24h0c-.38,0-.75.15-1.02.42s-.42.63-.42,1.02l.02-.02ZM7.15,21.77c-1.17-.05-1.81-.25-2.23-.41-.57-.22-.96-.48-1.38-.9s-.69-.82-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.05-1.26-.07-1.64-.07-4.85s.01-3.59.07-4.85c.05-1.17.25-1.81.41-2.23.22-.57.48-.96.9-1.38s.82-.69,1.38-.9c.42-.16,1.06-.36,2.23-.41,1.26-.05,1.64-.07,4.85-.07s3.59.01,4.85.07c1.17.05,1.81.25,2.23.41.57.22.96.48,1.38.9.42.42.67.82.9,1.38.16.42.36,1.06.41,2.23.05,1.26.07,1.64.07,4.85s-.01,3.59-.07,4.85c-.05,1.17-.25,1.81-.41,2.23-.22.57-.48.96-.9,1.38-.42.42-.82.67-1.38.9-.42.16-1.06.36-2.23.41-1.26.05-1.64.07-4.85.07s-3.59-.01-4.85-.07ZM7.05.07c-1.27.05-2.15.26-2.92.55-.79.3-1.46.72-2.12,1.38-.66.66-1.08,1.34-1.38,2.12-.29.76-.5,1.63-.55,2.92C.02,8.32,0,8.73,0,11.99s.01,3.67.08,4.95c.05,1.27.26,2.15.55,2.92.3.79.72,1.46,1.38,2.12s1.34,1.08,2.12,1.38c.76.29,1.63.5,2.92.55,1.28.05,1.69.08,4.95.08s3.67-.01,4.95-.08c1.27-.05,2.15-.26,2.92-.55.79-.3,1.46-.72,2.12-1.38s1.08-1.34,1.38-2.12c.29-.76.5-1.63.55-2.92.05-1.28.08-1.69.08-4.95s-.01-3.67-.08-4.95c-.05-1.27-.26-2.15-.55-2.92-.3-.79-.72-1.46-1.38-2.12s-1.34-1.08-2.12-1.38c-.76-.29-1.63-.5-2.92-.55C15.67.01,15.26,0,12,0S8.33,0,7.05.07Z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="address">
+                <div class="address-container">
+                  <div class="section-heading">
+                    <span>Registerd Office Address</span>
+                  </div>
+                  <div class="mail-us-lists">
+                    <div class="details">
+                      <p>Flipkart Internet Private Limited, </p>
+                      <p> Buildings Alyssa, Begonia & </p>
+                      <p> Clove Embassy Tech Village, </p>
+                      <p> Outer Ring Road, Devarabeesanahalli Village, </p>
+                      <p> Bengaluru, 560103, </p>
+                      <p> Karnataka, India </p>
+                      <p> CIN : U51109KA2012PTC066107 </p>
+                      <p>Telephone: <a href="#">044-45614700</a> /<a href="#">044-67415800</a> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom-footer">
+              <div>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                  <defs>
+                    <linearGradient id="a" x1="0%" x2="86.876%" y1="0%" y2="80.202%">
+                      <stop offset="0%" stop-color="#FFD800"></stop>
+                      <stop offset="100%" stop-color="#FFAF00"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M-2-2h20v20H-2z"></path>
+                    <path fill="url(#a)" fill-rule="nonzero" d="M15.93 5.614h-2.948V4.14c0-.818-.655-1.473-1.473-1.473H8.56c-.817 0-1.473.655-1.473 1.473v1.474H4.14c-.818 0-1.466.656-1.466 1.474l-.007 8.105c0 .818.655 1.474 1.473 1.474h11.79c.818 0 1.474-.656 1.474-1.474V7.088c0-.818-.656-1.474-1.474-1.474zm-4.421 0H8.56V4.14h2.948v1.474z" transform="translate(-2 -2)"></path>
+                  </g>
+                </svg>
+                <span>Become a Seller</span>
+              </div>
+
+              <div>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                  <defs>
+                    <linearGradient id="a" x1="0%" x2="86.876%" y1="0%" y2="80.202%">
+                      <stop offset="0%" stop-color="#FFD800"></stop>
+                      <stop offset="100%" stop-color="#FFAF00"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M-3-3h20v20H-3z"></path>
+                    <path fill="url(#a)" fill-rule="nonzero" d="M10.492 3C6.353 3 3 6.36 3 10.5c0 4.14 3.353 7.5 7.492 7.5C14.64 18 18 14.64 18 10.5 18 6.36 14.64 3 10.492 3zm3.18 12L10.5 13.088 7.327 15l.84-3.607L5.37 8.97l3.69-.315L10.5 5.25l1.44 3.398 3.69.315-2.798 2.422.84 3.615z" transform="translate(-3 -3)"></path>
+                  </g>
+                </svg>
+                <span>Advertise</span> 
+              </div>
+              <div>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                  <defs>
+                    <linearGradient id="a" x1="0%" x2="86.876%" y1="0%" y2="80.202%">
+                      <stop offset="0%" stop-color="#FFD800"></stop>
+                      <stop offset="100%" stop-color="#FFAF00"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M-1-1h20v20H-1z"></path>
+                    <path fill="url(#a)" fill-rule="nonzero" d="M16.667 5H14.85c.092-.258.15-.542.15-.833a2.497 2.497 0 0 0-4.583-1.375L10 3.35l-.417-.567A2.51 2.51 0 0 0 7.5 1.667a2.497 2.497 0 0 0-2.5 2.5c0 .291.058.575.15.833H3.333c-.925 0-1.658.742-1.658 1.667l-.008 9.166A1.66 1.66 0 0 0 3.333 17.5h13.334a1.66 1.66 0 0 0 1.666-1.667V6.667A1.66 1.66 0 0 0 16.667 5zm0 6.667H3.333v-5h4.234L5.833 9.025l1.35.975 1.984-2.7L10 6.167l.833 1.133 1.984 2.7 1.35-.975-1.734-2.358h4.234v5z" transform="translate(-1 -1)"></path>
+                  </g>
+                </svg>
+                <span>Gift Card</span>
+              </div>
+
+              <div>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                  <defs>
+                    <linearGradient id="a" x1="0%" x2="86.876%" y1="0%" y2="80.202%">
+                      <stop offset="0%" stop-color="#FFD800"></stop>
+                      <stop offset="100%" stop-color="#FFAF00"></stop>
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <path d="M-2-3h20v20H-2z"></path>
+                    <path fill="url(#a)" fill-rule="nonzero" d="M9.5 3C5.36 3 2 6.36 2 10.5 2 14.64 5.36 18 9.5 18c4.14 0 7.5-3.36 7.5-7.5C17 6.36 13.64 3 9.5 3zm.75 12.75h-1.5v-1.5h1.5v1.5zm1.553-5.813l-.676.69c-.54.548-.877.998-.877 2.123h-1.5v-.375c0-.825.338-1.575.877-2.123l.93-.945c.278-.27.443-.645.443-1.057 0-.825-.675-1.5-1.5-1.5S8 7.425 8 8.25H6.5a3 3 0 1 1 6 0c0 .66-.27 1.26-.697 1.688z" transform="translate(-2 -3)"></path>
+                  </g>
+                </svg>
+                <span>Help Center</span>
+              </div>
+
+              <div>
+                <span>
+                  <span>© 2007-2025</span>
+                  <span>Flipkart.com</span>
+                </span>
+              </div>
+              <img src="./images/payment-method_69e7ec.svg">
+            </div>
+          </div>
+         </div>
+      </footer>
+<script>
+    const products = [
+        {
+            "id": 1,
+            "product_name": "REDMI A3X (Midnight Black, 128 GB)",
+            "image": "./images/-original-imah2hfpxtwagduh.jpeg",
+            "price": {
+                "current_price": "₹6,499",
+                "original_price": "₹10,999",
+                "discount_percentage": "40% off"
+            },
+            "rating": {
+                "score": 4.1,
+                "total_ratings": "7,529 Ratings",
+                "total_reviews": "311 Reviews"
+            },
+            "specifications": {
+                "ram": "4 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.04 cm (6.71 inch) HD+ Display",
+                "rear_camera": "8MP",
+                "front_camera": "5MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,350</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 2,
+            "product_name": "REDMI A5 (Jaisalmer Gold, 128GB)",
+            "image": "./images/redmi.webp",
+            "price": {
+                "current_price": "₹7,499",
+                "original_price": "₹9,999",
+                "discount_percentage": "25% off"
+            },
+            "rating": {
+                "score": 4.2,
+                "total_ratings": "2,647 Ratings",
+                "total_reviews": "148 Reviews"
+            },
+            "specifications": {
+                "ram": "4 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 2 TB",
+                "display": "17.48 cm (6.88 inch) HD+ Display",
+                "rear_camera": "32MP",
+                "front_camera": "8MP",
+                "battery": "5200 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹5,100</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 3,
+            "product_name": "Nokia 105 Single SIM, Keypad Mobile Phone",
+            "image": "./images/105-single-sim-keypad-mobile-phone-with-wireless-fm-radio-ta.jpeg",
+            "price": {
+                "current_price": "₹939",
+                "original_price": "₹1,599",
+                "discount_percentage": "41% off"
+            },
+            "rating": {
+                "score": 4.1,
+                "total_ratings": "1,71,013 Ratings",
+                "total_reviews": "10,902 Reviews"
+            },
+            "specifications": {
+                "ram": "4 MB",
+                "rom": "10 MB",
+                "display": "3.86 cm (1.52 inch) Display",
+                "battery": "800 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty on Handset",
+                "accessories_warranty": "6 Months Warranty on Accessories"
+            },
+            "offers": {
+                "phones_left": "Only 1 left",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 4,
+            "product_name": "Motorola g45 5G (Brilliant Blue, 128 GB)",
+            "image": "./images/-original-imah3xk892aj9gck.jpeg",
+            "product_price": {
+                "current_price": "₹11,999",
+                "original_price": "₹14,999",
+                "discount_percentage": "20% off" 
+            },
+            "rating": {
+                "score": 4.3,
+                "total_ratings": "2,13,881 Ratings",
+                "total_reviews": "10,880 Reviews"
+            },
+            "specifications": {
+                "ram": "8 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "16.51 cm (6.5 inch) HD+ Display",
+                "rear_camera": "50MP + 2MP",
+                "front_camera": "16MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Warranty on Handset",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹8,350</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 5,
+            "product_name": "Samsung Galaxy F05 (Twilight Blue, 64 GB)",
+            "image": "./images/-original-imah56hkgehywn5b.jpeg",
+            "product_price": {
+                "current_price": "₹6,249",
+                "original_price": "₹9,999",
+                "discount_percentage": "37% off"
+            },
+            "rating": {
+                "score": 4.2,
+                "total_ratings": "11,399 Ratings",
+                "total_reviews": "488 Reviews"
+            },
+            "specifications": {
+                "ram": "3 GB",
+                "rom": "64 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.12 cm (6.74 inch) HD+ Display",
+                "rear_camera": "50MP + 2MP",
+                "front_camera": "8MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In-Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,150</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 6,
+            "product_name": "realme Narzo 80 Lite 4G (Beach Gold, 64 GB)",
+            "image": "./images/narzo-80-lite-4g-rmx5313-realme-original-imahegxgdvbva7zf.jpeg",
+            "product_price": {
+                "current_price": "₹7,233",
+                "original_price": "₹8,999",
+                "discount_percentage": "19% off"
+            },
+            "rating": {
+                "score": 4.3,
+                "total_ratings": "11,399 Ratings",
+                "total_reviews": "488 Reviews"
+            },
+            "specifications": {
+                "ram": "4 GB",
+                "rom": "64 GB",
+                "display": "17.12 cm (6.74 inch) HD+ Display",
+                "rear_camera": "13MP",
+                "battery": "6300 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year brand Warranty"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹3,950</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 7,
+            "product_name": "POCO C71 (Power Black, 128 GB)",
+            "image": "./images/-original-imahawgahmkbjxyj.jpeg",
+            "product_price": {
+                "current_price": "₹6,999",
+                "original_price": "₹9,999",
+                "discount_percentage": "30% off"
+            },
+            "rating": {
+                "score": 4.1,
+                "total_ratings": "14,636 Ratings",
+                "total_reviews": "721 Reviews"
+            },
+            "specifications": {
+                "ram": "6 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 2 TB",
+                "display": "17.48 cm (6.88 inch) HD+ Display",
+                "rear_camera": "32MP",
+                "front_camera": "8MP",
+                "battery": "5200 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,700</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 8,
+            "product_name": "Samsung Guru 1200",
+            "image": "./images/guru-1200-gt-e1215-samsung-original-imahcy4euvf4j3rm.jpeg",
+            "product_price": {
+                "current_price": "₹999",
+                "original_price": "₹1,499",
+                "discount_percentage": "33% off"
+            },
+            "rating": {
+                "score": 3,
+                "total_ratings": "8,427 Ratings",
+                "total_reviews": "601 Reviews"
+            },
+            "specifications": {
+                "ram": "4 MB",
+                "rom": "10 MB",
+                "display": "3.86 cm (1.52 inch) Display",
+                "battery": "800 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "NA"
+            },
+            "offers": {
+                "phones_left": "Only 1 left",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 9,
+            "product_name": "POCO C71 (Desert Gold, 128 GB)",
+            "image": "./images/-original-imahawgayvnqkzaz.jpeg",
+            "product_price": {
+                "current_price": "₹6,999",
+                "original_price": "₹9,999",
+                "discount_percentage": "30% off"
+            },
+            "rating": {
+                "score": 4.1,
+                "total_ratings": "14,636 Ratings",
+                "total_reviews": "721 Reviews"
+            },
+            "specifications": {
+                "ram": "6 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 2 TB",
+                "display": "17.48 cm (6.88 inch) HD+ Display",          
+                "rear_camera": "32MP",
+                "front_camera": "8MP",
+                "battery": "5200 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,700</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 10,
+            "product_name": "REDMI A5 (Just Black, 64 GB)",
+            "image": "./images/-original-imahb56zdgszp7tg.jpeg",
+            "product_price": {
+                "current_price": "₹6,499",
+                "original_price": "₹8,999",
+                "discount_percentage": "27% off"
+            },
+            "rating": {
+                "score": 4.2,
+                "total_ratings": "3,267 Ratings",
+                "total_reviews": "149 Reviews"
+            },
+            "specifications": {
+                "ram": "3 GB",
+                "rom": "64 GB",
+                "storage_expandable": "Upto 2 TB",
+                "display": "17.48 cm (6.88 inch) HD+ Display",
+                "rear_camera": "32MP",
+                "front_camera": "8MP",
+                "battery": "5200 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,350</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 11,
+            "product_name": "POCO C75 5G (Aqua Bliss, 64 GB)",
+            "image": "./images/-original-imahbr2cz5apcwze (1).jpeg",
+            "product_price": {
+                "current_price": "₹7,699",
+                "original_price": "₹10,999",
+                "discount_percentage": "30% off"
+            },
+            "rating": {
+                "score": 4.2,
+                "total_ratings": "1,03,254 Ratings",
+                "total_reviews": "4,829 Reviews"
+            },
+            "specifications": {
+                "ram": "3 GB",
+                "rom": "64 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.48 cm (6.88 inch) HD+ Display",
+                "rear_camera": "50MP",
+                "front_camera": "5MP",
+                "battery": "5160 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹5200</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 12,
+            "product_name": "Samsung Guru Music 2 B310ED",
+            "image": "./images/guru-music-2-b310ed-guru-music-2-samsung-original-imahfyupkv.jpeg",
+            "product_price": {
+                "current_price": "₹898",
+                "original_price": "₹1,999",
+                "discount_percentage": "55% off"
+            },
+            "rating": {
+                "score": 3.1,
+                "total_ratings": "24,038 Ratings",
+                "total_reviews": "1,689 Reviews"
+            },
+            "specifications": {
+                "ram": "32 MB",
+                "rom": "32 MB",
+                "storage_expandable": "Upto 100 MB",
+                "display": "4.57 cm (1.8 inch) VGA Display",
+                "rear_camera": "0MP",
+                "front_camera": "0MP",
+                "battery": "800 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Seller Warranty"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹3,950</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 13,
+            "product_name": "HOTLINE TURTLE",
+            "image": "./images/classic-turtle-classic-turtle-hotline-original-imahb9gz8jgyn.jpeg",
+            "product_price": {
+                "current_price": "₹499",
+                "original_price": "₹999",
+                "discount_percentage": "50% off"
+            },
+            "rating": {
+                "score": 3.7,
+                "total_ratings": "376 Ratings",
+                "total_reviews": "27 Reviews"
+            },
+            "specifications": {
+                "ram": "32 MB",
+                "rom": "32 MB",
+                "storage_expandable": "Upto 16 GB",
+                "display": "4.57 cm (1.8 inch) NA Display",
+                "rear_camera": "1.3MP + 0MP",
+                "front_camera": "0MP",
+                "battery": "1100 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "3 Months domestic Warranty"
+            },
+            "offers": {
+                "phones_left": "Only 1 left",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 14,
+            "product_name": "Samsung Galaxy S25 Ultra",
+            "image": "./images/ultra.webp",
+            "product_price": {
+                "current_price": "₹1,19,999",
+                "original_price": "₹1,29,999",
+                "discount_percentage": "7% off"
+            },
+            "rating": {
+                "score": 4.7,
+                "total_ratings": "2,012 Ratings",
+                "total_reviews": "222 Reviews"
+            },
+            "specifications": {
+                "ram": "12 GB",
+                "rom": "256 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.53 cm (6.9 inch) Quad HD+ Display",
+                "rear_camera": "200MP + 50MP + 50MP + 10MP",
+                "front_camera": "12MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹41,350</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 15,
+            "product_name": "MOTOROLA g35 5G (Midnight Black, 128 GB)",
+            "image": "./images/g35-5g-pb3h0000in-motorola-original-imah7c6ykgz5rtgv.jpeg",
+            "product_price": {
+                "current_price": "₹8,999",
+                "original_price": "₹12,499",
+                "discount_percentage": "28% off"
+            },
+            "rating": {
+                "score": 4.2,
+                "total_ratings": "75,633 Ratings",
+                "total_reviews": "5,241 Reviews"
+            },
+            "specifications": {
+                "ram": "4 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.07 cm (6.72 inch) Full HD+ Display",
+                "rear_camera": "50MP + 8MP",
+                "front_camera": "16MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹6,150</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        },
+        {
+            "id": 16,
+            "product_name": "REDMI A3X (Ocean Green, 128 GB)",
+            "image": "./images/a3x-24048rn6cl-redmi-original-imah8zszncah24z8.jpeg",
+            "product_price": {
+                "current_price": "₹6,499",
+                "original_price": "₹10,999",
+                "discount_percentage": "40% off"
+            },
+            "rating": {
+                "score": 4.1,
+                "total_ratings": "7,529 Ratings",
+                "total_reviews": "314 Reviews"
+            },
+            "specifications": {
+                "ram": "3 GB",
+                "rom": "128 GB",
+                "storage_expandable": "Upto 1 TB",
+                "display": "17.04 cm (6.71 inch) HD+ Display",
+                "rear_camera": "8MP",
+                "front_camera": "5MP",
+                "battery": "5000 mAh"
+            },
+            "warranty": {
+                "phone_warranty": "1 Year Manufacturer Warranty",
+                "accessories_warranty": "6 Months Warranty for In the Box Accessories"
+            },
+            "offers": {
+                "exchange_offer": "Upto <b>₹4,350</b> Off on Exchange",
+                "bank_offer": "Bank Offer"
+            }
+        }
+    ];
+
+    function generateProductCardHTML(product) {
+        const price = product.price || product.product_price;
+        
+        const specsKeys = [
+            'ram', 'rom', 'storage_expandable', 'display', 'rear_camera', 
+            'front_camera', 'battery', 'cpu', 'processor'
+        ];
+        
+        const specsList = specsKeys.map(key => {
+            let specValue = product.specifications[key];
+            if (specValue) {
+                let formattedSpec = '';
+                switch (key) {
+                    case 'ram':
+                        formattedSpec = `${specValue} RAM | ${product.specifications.rom || ''} ROM ${product.specifications.storage_expandable ? '| Expandable Upto ' + product.specifications.storage_expandable : ''}`;
+                        break;
+                    case 'display':
+                        formattedSpec = specValue;
+                        break;
+                    case 'rear_camera':
+                        if (product.specifications.front_camera) {
+                            formattedSpec = `${specValue} | ${product.specifications.front_camera} Front Camera`;
+                        } else {
+                             formattedSpec = specValue;
+                        }
+                        break;
+                    case 'battery':
+                        formattedSpec = `${specValue} Battery`;
+                        break;
+                    case 'phone_warranty':
+                        formattedSpec = product.warranty.phone_warranty;
+                        if (product.warranty.accessories_warranty) {
+                            formattedSpec += ` and ${product.warranty.accessories_warranty}`;
+                        }
+                        break;
+                    default:
+                        return null;
+                }
+           
+                if (key === 'ram' || key === 'display' || key === 'rear_camera' || key === 'battery') {
+                    return `<li>${formattedSpec}</li>`;
+                }
+            }
+            return null;
+        }).filter((item, index, self) => item !== null && self.indexOf(item) === index) 
+        .join('');
+
+        const mainOffer = product.offers.exchange_offer || product.offers.phones_left || 'No Exchange Offer Available';
+
+        return `
+            <div class="product-card">
+                <div class="product-image"> 
+                    <div class="wishlist-icon"><svg xmlns="http://www.w3.org/2000/svg" class="N1bADF" width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#2874F0" class="x1UMqG" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg></div>
+                    <img src="${product.image}" alt="${product.product_name}">
+         <div class="compare-checkbox-container">
+        <label="compare">
+            <input type="checkbox" class="compare-checkbox" data-product-id="${product.id}">
+            Add to Compare
+        </label>
+         </div>
+            </div>
+                        <div class="product-details">
+                    <h3>${product.product_name}</h3>
+                    <div class="rating">
+                        <span class="rating-value">${product.rating.score} <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" class="star"></span>
+                    </div>
+                        <span class="review-count">${product.rating.total_ratings} & ${product.rating.total_reviews}</span>
+                    <ul class="specs">
+                        ${specsList} 
+                        <li>${product.warranty.phone_warranty || product.warranty.accessories_warranty}</li>
+                    </ul>
+                </div>
+                <div class="product-pricing">
+                    <div class="price-main">
+                        <span class="current-price">${price.current_price}</span>
+                        ${price.current_price.replace(/[^\d]/g, '') > 500 ? '<span class="assured"><img src="./images/fa_9e47c1.png" alt="F-Assured"></span>' : ''}
+                    </div>
+                    <div>
+                    <span class="old-price">${price.original_price} </span>
+                    <span class="discount">${price.discount_percentage} </span>
+                    </div>
+                    <p class="offer">${mainOffer}</p> 
+                    <p class="bank-offer">${product.offers.bank_offer || ''}</p>
+                </div>
+            </div>
+        `;
+    }
+
+    const allProductsHTML = products.map(generateProductCardHTML).join('');
+    document.addEventListener('DOMContentLoaded', () => {
+        const resultsContainer = document.querySelector('.product-results');
+        if (resultsContainer) {
+            resultsContainer.insertAdjacentHTML('beforeend', allProductsHTML);
+        } else {
+            console.error("Could not find the '.product-results' container to inject products.");
+        }
+    });
+  </script>
+  <script src ="index.js"></script>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
