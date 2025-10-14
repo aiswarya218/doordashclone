@@ -242,8 +242,10 @@ body {
 
 .orders {
   display: flex;
+  /* justify-content: center;
+  margin-bottom: 24px; */
+  -moz-box-pack: center;
   justify-content: center;
-  margin-bottom: 24px;
 }
 
 .order-title {
@@ -1201,14 +1203,6 @@ body {
   font-weight: 500;
 }
 
-.grocery-body {
-  background-image: url(https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/grocery_desktop.png);
-  position: relative;
-  height: 350px;
-  background-size: cover;
-  background-position: center;
-}
-
 .grocery-sct_a {
   background-color: rgba(30, 30, 30, 0.6);
   top: 0;
@@ -1226,9 +1220,16 @@ body {
 }
 
 .grocery-sct_b {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
+  align-items: center; */
+  -moz-box-align: center;
   align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 550px;
+  flex-direction: column;
+  display: flex;
 }
 
 .grocery_pg_a {
@@ -1249,21 +1250,20 @@ body {
   text-align: center;
   color: white;
   filter: drop-shadow((0, 0, 0, 0.2) 0px 2px 8px); 
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: "bold";
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.01px;
-  text-decoration: none;
+  text-decoration: none;   
 }
 
-.grocery_pg_c {
+.grocery_pg_c {  
   text-align: center;
   color: white;
   margin-top: 10px;
   font-family: "medium";
-  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.01px;
@@ -1478,6 +1478,7 @@ body {
 
 .package-main { 
   text-align: center;
+  -moz-box-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -2096,6 +2097,32 @@ display: none;
   display:none;
  }
 
+ @media screen and (min-width:375px){
+   .grocery-body {
+  background-image: url(https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/grocery_desktop.png);
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+ .fee-supply {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+ }
+
+ .fees {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+   font-family: "bold";
+ }
+ }
 @media screen and (min-width:768px){
 
 .d-button {
@@ -2136,6 +2163,24 @@ display: none;
   border-radius: 9999px;
   border: none;
 }
+ .fee-supply {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+ }
+
+ .fees {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "bold";
+ }
+ 
 .man_sign_property{
   padding: 0px 12px;
   display: flex;
@@ -2512,7 +2557,7 @@ height: 500px;
 object-fit: cover;
 }
 .b-img{
-  height: 500px;  /*width:700px;*/
+  height: 500px;
   width: 100;
 }
 .deli_business{
@@ -2525,7 +2570,7 @@ margin: 20px 0px 0px;
 }
 
 .delivery_b1{
-font-size:16px;
+font-size:18px;
 font-weight: 500;
 line-height: 22px
 }
@@ -2691,6 +2736,23 @@ color:#606060ff;
 .business-door{
     max-width: 400px;
 }
+ .fee-supply {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+ }
+
+ .fees {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+   font-family: "bold";
+ }
 }
 @media screen and (min-width:960px){
 .signup1{
@@ -2729,6 +2791,19 @@ height: 18px;
   transform: translateY(-205.6px); 
    margin-block: 24px;
 }
+.order-title {
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  font-size: 40px;
+  color: rgb(255 255 255);
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: -0.01px;
+  padding: 0px;
+  margin: 0px;
+  max-width: 750px;
+  max-height: 56px;
+}
 .restaurantfood_c svg{
 object-position: center;
 aspect-ratio: 1 / 1;
@@ -2742,7 +2817,7 @@ aspect-ratio: 1 / 1;
   font-family: "medium";
   font-size: 40px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 40px;
   letter-spacing: -0.01px;
   text-decoration: none;
 }
@@ -2765,7 +2840,7 @@ aspect-ratio: 1 / 1;
   color: white;
   margin-top: 10px;
   font-family: "medium";
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.01px;
@@ -2783,6 +2858,24 @@ aspect-ratio: 1 / 1;
   display: flex;
   
 } */
+ .fee-supply {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+ }
+
+ .fees {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 600;
+   font-family: "bold";
+ }
+
  .footer_subcontainer{
   white-space: nowrap;
  }
@@ -2848,6 +2941,13 @@ width: 154px;
 }
 .open_container {
   text-align: center;
+}
+.grocery-body {
+  background-image: url(https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/managed/consumer/seo/home/landing_cta/grocery_desktop.png);
+  position: relative;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
 }
 .cont_text{
  text-align:center;

@@ -152,3 +152,58 @@ const areAnagrams = (str1, str2) => {
 console.log(areAnagrams("listen", "silent"));
 console.log(areAnagrams("hello", "world"));
 console.log(areAnagrams("Dormitory", "dirty room"));
+
+
+
+call
+   const person = { name: 'Alice' };
+   function greet(greeting) {
+    console.log(`${greeting}, my name is ${this.name}`);
+   }
+   greet.call(person, 'Hello');
+
+apply()
+    const person1 = { name: 'Bob' };
+    function introduce(greeting, age) {
+      console.log(`${greeting}, my name is ${this.name} and  I am ${age} years old.`);
+    }
+    introduce.apply(person1, ['Hi', 30]);
+
+bind()
+    const person2 = { name: 'Charlie' };
+    function sayGoodbye() {
+        console.log(`Goodbye, from ${this.name}`);
+    }
+    const boundSayGoodbye = sayGoodbye.bind(person2);
+    boundSayGoodbye();
+
+
+// Promise - allows you to associate handlers with an asynchronous action eventual success
+//           or failure reason. 
+//           it provides a structured way to handle asynchronous ConvolverNode, offering cleaner alternative to traditional callback
+//           functions,especially while dealing with many asynchronous tasks.
+// three states --  pending, fulfilled and rejected
+
+
+// Call By Value (Primitive)
+    // This means a copy of the actual value is passed to the function's parameter. 
+    // Any modifications made to the parameter inside the function will not affect the original variable outside the function. 
+// eg:   function modifyPrimitive(num) {
+//         num = num + 10;
+//         console.log("Inside function (primitive):", num);
+//     }
+//         let originalNumber = 10;
+//         modifyPrimitive(originalNumber);
+//         console.log("Outside function (primitive):", originalNumber);
+
+// Call By ReferenceError(Non-Primitive/Objects)  (pass by sharing)
+    //    a reference (or memory address) to the original object is passed to the function's parameter.
+    //    Any modifications made to the properties of the object inside the function will affect the original object outside the function, because both the original variable and the function parameter point to the same object in memory.
+    //    However, if you reassign the parameter to a completely new object inside the function, the original object will remain unchanged, as the parameter now points to a different memory location.
+    // eg:   function modifyObject(obj) {
+    //       obj.name = "Mary";
+    //       console.log("Inside function (object):", obj);
+    //       }
+    //       let originalObject = { name: "Sunny" };
+    //       modifyObject(originalObject);
+    //       console.log("Outside function (object):", originalObject);

@@ -79,15 +79,22 @@ ul {
 }
 
 .search-bar input {
-    /* height: 20px; */
-  width: 100%;
+  /* width: 100%;
   border-width: 0 0 2px;
   border-color: #e0e0e0;
   font-size: 14px;
   padding: 0 0 0 21px;
   color: #878787; 
-  outline: none;
-}
+  outline: none; */
+      padding: 0 16px;
+      border-radius: 2px 0 0 2px;
+      border: 0;
+      outline: 0 none;
+      font-size: 14px;
+      height: 36px;
+      width: 100%;
+    }
+
 
 .search-bar button {
     background-color: white;
@@ -103,6 +110,7 @@ ul {
   width: 12px;
   height: 20px;
   position: absolute;
+  color: #555;
 }
 
 .auth-nav {
@@ -132,6 +140,7 @@ ul {
 .custom-icon-size {
    font-size: 8px;
    margin: 1px 0 0 8px;
+   color: grey;
 }
 
 .main-categories {
@@ -187,8 +196,10 @@ ul {
 }
 
 .filter-section {
-    padding: 10px 15px;
+  display: block;
+    padding: 16px;
     border-bottom: 1px solid #f0f0f0; 
+    width: 100%;
 }
 
 .filter-header {
@@ -209,6 +220,22 @@ ul {
     font-size: 16px;
     color: #555;
     transform: rotate(90deg); 
+}
+
+.brand-search {
+   margin: 7px 0;
+   margin-bottom: 7px;
+}
+
+.search-bd {
+  width: 100%;
+  border-width: 0 0 2px;
+  border-color: #e0e0e0;
+  height: 20px;
+  font-size: 14px;
+  padding: 0 0 0 21px;
+  color: #878787;
+  outline: none;
 }
 
 .filter-option {
@@ -289,11 +316,16 @@ ul {
 }
 
 .filter-group h3 {
-   font-size: 12px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 5px;
+}
+
+.brand-filter ul li{
+  padding: 4px 0;
+  font-size: 14px;
 }
 
 .filter-content {
@@ -333,6 +365,7 @@ ul {
   margin-top: 8px;
   display: inline-block;
 }
+
 .sort-options {
     background-color: white;
     /* padding: 5px 10px; */
@@ -340,6 +373,7 @@ ul {
     border-radius: 2px;
     box-shadow: 2px solid  rgba(0,0,0,.1);
     font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .sort-options span {
@@ -372,7 +406,6 @@ ul {
 .price-filter-section {
     padding: 10px 15px 10px 15px;
     border-bottom: 1px solid #e0e0e0;
-    /* margin-bottom: 15px; */
 }      
 
 .filter-header {
@@ -531,17 +564,19 @@ ul {
   top: 2px;
   right: -8px;
   cursor: pointer;
-    
 }
 
 .product-details {
     display: inline-block;
+    padding-left: 25px;
+    width: calc(100% - 200px);
 }
 
 .product-details .specs{
     flex-grow: 1;
     padding: 0 10px;
     list-style-type: disc;
+    margin-top: 13px;
 }
 
 .product-details .specs li {
@@ -549,12 +584,6 @@ ul {
     font-size: 13px; 
     line-height: 1.6; 
 }
-
-/* .sponsored-tag {
-    font-size: 12px;
-    color: #c2c2c2;
-    margin-bottom: 5px;
-} */
 
 .product-details h3 {
     font-size: 18px;
@@ -566,6 +595,7 @@ ul {
 .product-details h3:hover {
     color: #2874f0;
 }
+
 .rating {
   line-height: normal;
   display: inline-block;
@@ -592,8 +622,6 @@ ul {
 }
 
 .product-pricing {
-    /* width: 200px;
-    text-align: left; */
     padding-left: 25px;
     width: 41.66%;
     display: inline-block;
@@ -607,7 +635,6 @@ ul {
 .price-main {
     display: flex;
     align-items: left;
-    /* justify-content: flex-end; */
     margin-bottom: 5px;
 }
 
@@ -621,10 +648,7 @@ ul {
 .assured img {
     height: 20px;
     display: inline-block;
-    /* vertical-align: top;
-    font-size: 0; */
     cursor: pointer;
-    /* padding-bottom: 4px; */
 }
 
 .old-price {
@@ -682,16 +706,12 @@ footer {
 }
 
 .compare-checkbox-container {
-    vertical-align: middle;
+    display: flex;
     margin-top: 16px;
 } 
 
-.compare-checkbox-container label {
-    display: flex; 
-    align-items: center; 
-    font-size: 14px; 
-    color: #555;
-    cursor: pointer;
+.compare-box {
+  display: inline-block;
 }
 
 .compare-checkbox {
@@ -707,6 +727,15 @@ footer {
     position: relative;
     background-color: #fff;
     flex-shrink: 0; 
+}
+
+.compare-text {
+  vertical-align: middle;
+  margin-left: 8px;
+  font-size: 14px;
+  color: #212121;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .compare-checkbox:checked {
@@ -732,6 +761,83 @@ footer {
   font-size: 14px;
   color: #212121;
   cursor: pointer;
+}
+
+.pagination-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Pagination styling */
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pagination a:hover {
+  background-color: #eaeaea;
+}
+
+.pagination a.active {
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination a.next {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+/* Feedback section */
+.feedback-section {
+  text-align: center;
+  background: #f7f9fc;
+  border-top: 1px solid #eee;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.feedback-section p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.feedback-buttons button {
+  font-size: 15px;
+  padding: 8px 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feedback-buttons button:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
 }
 
 .page-number-container {
@@ -815,8 +921,6 @@ footer {
   vertical-align: middle;
 }
 .results-summary {
-  /* margin-top: 0;  */
-  /* margin-bottom: 10px; */
   font-weight: bold;
   font-size: 16px;
   margin-top: 8px;
@@ -825,7 +929,6 @@ footer {
 
 .sort-options {
   display: flex;
-  /* justify-content: flex-end;  */
   align-items: center;
   flex-wrap: wrap;
   font-size: 14px;
@@ -1087,7 +1190,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
+  gap: 50px;
   font-size: 12px;
   color: #fff;
 }
@@ -1095,7 +1198,7 @@ footer {
 .bottom-footer div {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 25px;
   cursor: pointer;
 }
 
@@ -1120,3 +1223,5 @@ footer {
     text-align: center;
   }
 }
+
+/* https://github.com/Devinterview-io/css-interview-questions */ 
