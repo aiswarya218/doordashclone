@@ -1942,7 +1942,7 @@ align-items: center;
 }
 
 .lst_span svg{
-  width: 32px;
+  width: 32px; 
   height: 18px;
   fill: #ffffff;
 }
