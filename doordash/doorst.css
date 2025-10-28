@@ -1580,7 +1580,7 @@ body {
   display: flex;
   justify-content: center;
   background-color:#ffffffff;
-  padding: 55px 20px 20px;
+  padding: 20px 20px 20px;
   width: 100%;
 }
 
@@ -2527,8 +2527,8 @@ width: 100%;
   height: 344.14px;
 } 
 .beauty_care{
-width: 100%;
-height: 100%;
+width: 552px;
+height: 552px;
 flex: 1;
 object-fit: cover;
 object-position: center;

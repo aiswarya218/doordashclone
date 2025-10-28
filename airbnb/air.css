@@ -468,7 +468,7 @@ body {
 
 .footer {
   background: #f7f7f7;
-  padding-inline: 24px;
+  /* padding-inline: 24px; */
   margin-inline: auto;   
   padding-block: 48px;
   max-width: 1920px;
@@ -658,8 +658,8 @@ body {
 }
 
 .footer-bottom-content {
-  max-width: 1080px;
-  margin: 0 auto;
+  /* max-width: 1080px;
+  margin: 0 auto; */ 
   padding: 0 24px;
   display: flex;
   flex-wrap: wrap;

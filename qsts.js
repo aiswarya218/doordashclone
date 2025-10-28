@@ -207,3 +207,221 @@ bind()
     //       let originalObject = { name: "Sunny" };
     //       modifyObject(originalObject);
     //       console.log("Outside function (object):", originalObject);
+
+
+
+    function maxWater(arr) {
+        let left = 1;
+        let right = arr.length - 2;  
+        let lMax = arr[left - 1];
+        let rMax = arr[right + 1];
+        let res = 0;
+
+        while (left <= right) {
+            if (rMax <= lMax) {
+                res += Math.max(0, rMax - arr[right]);
+                rMax = Math.max(rMax, arr[right]);
+                right -= 1;
+            }
+            else {
+                res += Math.max(0, lMax - arr[left]);
+                lMax = Math.max(lMax, arr[left]);
+                left += 1;
+            }
+        }
+        return res;   
+    }
+    let arr = [2, 1, 5, 3, 1, 0, 4];
+    console.log(maxWater(arr));  
+
+
+//BUBBLE SORTING 
+   function bubbleSort(arr) {
+      const n = arr.length;
+      let swapped;
+        for (let i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (let j = 0; j < n - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+        let bubbleArr = [5, 1, 4, 2, 8];
+        console.log("Original Array (Bubble Sort):", bubbleArr);
+        console.log("Sorted Array (Bubble Sort):", bubbleSort(bubbleArr));     //[1, 2, 4, 5, 8]
+    }     
+
+
+//QUICK SORTING
+ function quickSort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    }
+    const pivotIndex = Math.floor(arr.length / 2);
+    const pivot = arr[pivotIndex];
+
+    const remaining = arr.slice(0, pivotIndex).concat(arr.slice(pivotIndex + 1));
+    const less = [];
+    const greater = [];
+     for (const element of remaining) {
+        if (element <= pivot) {
+            less.push(element);
+        }
+        else {
+            greater.push(element);
+        }
+     }
+
+     return [
+        ...quickSort(less),
+        pivot,
+        ...quickSort(greater)
+     ];
+    }
+let quickArr = [8, 3, 1, 5, 4, 9, 2];
+console.log("Original Array (Quick Sort):", quickArr);
+console.log("Sorted Array (Quick Sort):", quickSort(quickArr));  //[1,2,3,4,5,8,9]
+
+
+function maxWater(arr) {
+    let res = 0;
+    for (let i = 1; i < arr.length - 1; i++) {
+        let left = arr[i];
+        for (let j = 0; j < i; j++)
+            left = Math.Emax(left, arr[j]);
+        let right = arr[i];
+        for (let j = i +1; j < arr.length; j++)
+            right = Math.max(right, arr[j]);
+        res += Math.min(left, right) - arr[i];
+    }
+    return res;
+}
+let arr1 = [2, 1, 5, 3, 1, 0, 4];
+console.log(maxWater(arr));
+
+
+
+function fetchData() {
+    return fetch("https://api.example.com/data")
+      .then((response) => response.json())
+      .then((data) => {
+         console.log(data);
+      });
+}
+async function processData() {
+    try {
+        const data = await fetchData();
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+processData();
+
+
+function printNumbers() {
+    for (var i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    }
+}
+printNumbers(); // prints 5 five times due to closure capturing the same 'i' variable
+
+
+
+// CREATING A PROMISE
+  function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = Math.random() > 0.5;
+            if (success) {
+                resolve({ data: "API data retrieved successfully!" });
+            }
+            else {
+                reject(new Error("Network connection timed out."));
+            }
+        }, 1500);
+    });
+  }
+
+  //CONSUMING A PROMISE(.then() and .catch())
+    console.log("Starting data fetch...");
+    fetchData()
+        .then(result => {
+            console.log("Success! Data received:");
+            console.log(result.data);
+            return "Processed: " + result.data;
+        })
+        .then(processedData => {
+            console.log("Next Step (Chaining):");
+            console.log(processedData);
+        })
+        .catch(error => {
+            console.error("Error! Failed to fetch data:");
+            console.error(error.message);
+        })
+        .finally(() => {
+            console.log("--- Fetch operation concluded ---");
+        });
+    console.log("This message appears immediately because this fetch is asynchronous");
+
+    // PENDING - initial state, neither fulfilled nor rejected.
+    // FULFILLED - meaning that the operation completed successfully.
+    // REJECTED - meaning that the operation failed.  
+    
+//Closure - makeCounter fn acts as a factory that creates and returns inner function
+    function makeCounter() {
+        let count = 0;
+        return function() {
+            count += 1;
+            return count;
+        };
+    }
+
+const counter1 = makeCounter();
+console.log(counter1()); // Output: 1
+console.log(counter1()); // Output: 2
+console.log(counter1()); // Output: 3
+
+const counter2 = makeCounter();
+console.log(counter2()); // Output: 1
+console.log(counter1()); // Output: 4
+
+
+// Time Complexity - Big O Notation
+
+// O(1) - Constant Time
+  function checkFirst(arr) {
+    if (arr.length === 0) return null;
+    return arr[0];
+  }
+  const persons = { name: "Alice", age: 30 };
+  console.log(person.age);
+
+//O(n) - Linear Time
+    function sumArray(arr) {
+        let sum = 0;
+        for (let i = 0;  i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    const doubled = arr.map(x => x * 2);
+
+//O(n^2) - Quadratic Time
+   function hasDuplicates(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (i !== j && arr[i] === arr[j]) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

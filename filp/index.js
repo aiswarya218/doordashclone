@@ -519,10 +519,9 @@
   const extractPrice = (p) =>
     parseInt((p.price?.current_price || p.product_price?.current_price).replace(/[^0-9]/g, ""));
 
-  //Render product cards (your exact layout)
   const renderProducts = (data) => {
     const html = data.map((product) => {
-      // Use price or product_price for flexibility
+  
       const price = product.price || product.product_price || {}; 
       const specsList = product.specifications
         ? Object.values(product.specifications)
@@ -614,15 +613,12 @@
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Select all clickable filter headers
     const filterHeaders = document.querySelectorAll('.filter-header');
 
     filterHeaders.forEach(header => {
         header.addEventListener('click', function() {
-            // Find the closest parent container with the class .filter-group
             const filterGroup = this.closest('.filter-group');
             
-            // Toggle the 'collapsed' class. CSS handles the hiding and arrow rotation.
             filterGroup.classList.toggle('collapsed');
         });
     });
@@ -643,7 +639,7 @@
   maxPriceSelect.addEventListener("change", applyFilters);
   clearAllBtn.addEventListener("click", clearAllFilters);
 
-  // Apply all filters
+  // Apply all fi
   function applyFilters() {
     const selectedBrands = getChecked(brandCheckboxes);
     const selectedRAM = getChecked(ramCheckboxes);
@@ -677,7 +673,6 @@
              ratingMatch && primaryMatch && secondaryMatch && priceMatch;
     });
 
-    // Re-apply the active sort after filtering
     const activeSortLink = document.querySelector(".sort-link.active");
     if (activeSortLink) {
         const type = activeSortLink.textContent.trim();
@@ -711,6 +706,15 @@
         }
     });
 });
+const filterHeaders = document.querySelectorAll('.filter-group .header-text, .filter-group .s-arrow');
+
+filterHeaders.forEach(header => {
+
+    header.addEventListener('click', function() {
+        const filterGroup = header.closest('.filter-group');
+        filterGroup.classList.toggle('collapsed');
+    });
+});
   const matchList = (list, value) =>
     !list.length || list.some(item => value && value.toLowerCase().includes(item.toLowerCase().split(" ")[0]));
 
@@ -721,7 +725,6 @@
     const currentClearAllBtn = clearAllBtn.parentNode === filterTagsContainer ? clearAllBtn : null;
     filterTagsContainer.innerHTML = "";
     
-    // Determine which price filter text to show
     const isPriceFiltered = minPriceSelect.value !== "min" || maxPriceSelect.value !== "30000";
     if (isPriceFiltered) {
         let min = minPriceSelect.value === "min" ? 'Min' : `₹${minPriceSelect.value}`;
@@ -731,7 +734,6 @@
 
     clearAllBtn.style.display = selected.length ? "inline-block" : "none";
 
-    // Hide or show container based on selection
     if (selected.length === 0) {
       filterTagsContainer.classList.add("hidden");
     } else {
@@ -755,13 +757,11 @@
       x.textContent = "✕";
       x.style.cssText = "cursor:pointer;font-weight:bold;";
       x.onclick = () => {
-        // Uncheck the filter
         const checkbox = [...allFilters].find(f => f.parentElement.textContent.trim() === item);
         if (checkbox) {
             checkbox.checked = false;
         } 
         
-        // Handle removing price tag
         if (item.includes("Price:")) {
              minPriceSelect.value = "min";
              maxPriceSelect.value = "30000"; 
@@ -775,7 +775,6 @@
     filterTagsContainer.appendChild(clearAllBtn);
   }
 
-  // Clear all filters
   function clearAllFilters() {
     [...allFilters].forEach(f => (f.checked = false));
     minPriceSelect.value = "min";
