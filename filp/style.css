@@ -236,12 +236,12 @@ ul {
 
 /* FILTERS */
 .filters-sidebar {
-    width: 20%;
-    min-width: 240px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  box-sizing: border-box;
+  width: 280px;
+  flex-basis: auto;
+  padding: 0px 10px 0px 0px;
+  background-color: #fff;
+  height: fit-content;
 }
 
 .filter-sidebar {
@@ -430,7 +430,7 @@ ul {
 }
 .filters-sidebar h2 {
     font-size: 18px;
-    padding-bottom: 10px;
+    padding: 16px 16px;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 15px;
 }
@@ -1414,110 +1414,99 @@ footer {
     .yes-btn {
         padding: 8px 20px;
     }
-    /* --- Refined Tablet View (768px to 1024px) --- */
+
 @media (max-width: 1024px) {
-    /* Main Layout */
-    /* By making the content-wrapper a column, the sidebar and results stack. 
-       We'll keep the sidebar hidden by default on smaller screens. */
     .content-wrapper {
         flex-direction: column; 
         gap: 10px;
     }
 
-    /* Filters/Sidebar - Hide by default, will be shown via JS/Button on mobile/tablet */
     .filters-sidebar {
-        /* The sidebar is taken out of flow, to be shown as a modal/drawer. */
         display: none; 
         width: 100%;
         min-width: unset;
     }
 
-    /* Product Card Adaptation for Tablet (more narrow view) */
     .product-card {
-        padding: 15px; /* Increase padding for better touch targets */
-        align-items: flex-start; /* Align items to the left */
+        padding: 15px; 
+        align-items: flex-start;
     }
 
-    /* Header adjustments for space efficiency */
     .header-content {
         padding: 0 15px; 
     }
 
-    /* Main Categories - Already good, but ensuring padding is minimal */
     .main-categories ul {
         justify-content: space-around;
         padding: 0 5px;
     }
 }
 
-/* --- Mobile View (Under 768px) --- */
 @media (max-width: 768px) {
-    /* Header - Optimize for vertical space and search visibility */
     .header-content {
-        padding: 0 5px; /* Minimal padding */
+        padding: 0 5px; 
     }
-    
-    /* Move the Logo to align with Flipkart's mobile look */
+
     .header-logo {
         margin-right: 10px;
     }
 
-    /* Make the Search Bar take up more space, as is common on mobile */
     .search-bar {
-        width: 100%; /* Full width within header-content */
+        width: 100%; 
         min-width: unset;
-        height: 38px; /* Slightly taller for better tapping */
+        height: 38px; 
     }
     
     .search-bar input {
         height: 38px;
     }
 
-    /* Auth Navigation - Keep only cart/minimal icons */
     .auth-nav {
-        gap: 8px; /* Reduce gap */
+        gap: 8px; 
         margin-left: 10px;
     }
 
-    /* Hide text-heavy buttons on mobile */
     .login-btn, .seller-btn, .more-btn {
         display: none;
     }
     
-    /* Product Sort & Info */
     .results-info {
-        font-size: 14px; /* Smaller font for space */
+        font-size: 14px; 
     }
 
-    /* Hide the sort label and make links full-width clickable */
+.sort-options {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+}
+
+@media (max-width: 768px) {
     .sort-options {
-        /* On mobile, sort options are often hidden or presented in a modal */
-        justify-content: space-around;
-        padding: 0;
-        border-top: 1px solid #e0e0e0; /* Add a top border if needed */
+        display: flex !important; 
     }
+}
+.sort-options, .sort-link {
+    visibility: visible !important; 
+    opacity: 1 !important;
+    height: auto !important;
+}
 
-    /* Hide the 'Sort By' label */
-    .sort-label {
-        display: none; 
-    }
-    
-    /* Make sort links take equal space */
     .sort-link {
-        flex: 1; /* Distribute space evenly */
+        flex: 1; 
         text-align: center;
         justify-content: center;
-        padding: 10px 0; /* Vertical padding is key */
-        border-bottom: none; /* Remove border-bottom from links */
+        padding: 10px 0; 
+        border-bottom: none; 
     }
 
     .sort-link.active {
-        border-bottom: 2px solid #2874f0; /* Use a bottom border for the active state */
+        border-bottom: 2px solid #2874f0; 
     }
 
-    /* Product Card Stack */
     .product-card {
-        flex-direction: column; /* Stack image and details vertically */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         padding: 15px;
@@ -1530,13 +1519,13 @@ footer {
     }
 
     .product-image img {
-        height: 150px; /* Adjust image height for mobile */
+        height: 150px; 
     }
 
     .product-details, .product-pricing {
         width: 100%;
         padding-left: 0;
-        text-align: left; /* Keep text left-aligned for readability */
+        text-align: left; 
     }
     
     .product-details h3 {
@@ -1566,5 +1555,4 @@ footer {
         align-items: center;
         gap: 15px;
     }
-}
 }

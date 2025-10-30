@@ -2,7 +2,7 @@
     {
       "id": 1,
       "product_name": "REDMI A3X (Midnight Black, 128 GB)",
-      "image": "./images/-original-imah2hfpxtwagduh.jpeg",
+      "image": "./-original-imah2hfpxtwagduh.jpeg",
       "price": {
         "current_price": "₹6,499",
         "original_price": "₹10,999",
@@ -31,7 +31,7 @@
     {
       "id": 2,
       "product_name": "REDMI A5 (Jaisalmer Gold, 128GB)",
-      "image": "./images/redmi.webp",
+      "image": "./redmi.webp",
       "price": {
         "current_price": "₹7,499",
         "original_price": "₹9,999",
@@ -60,7 +60,7 @@
     {
       "id": 3,
       "product_name": "Nokia 105 Single SIM, Keypad Mobile Phone",
-      "image": "./images/105-single-sim-keypad-mobile-phone-with-wireless-fm-radio-ta.jpeg",
+      "image": "./105-single-sim-keypad-mobile-phone-with-wireless-fm-radio-ta.jpeg",
       "price": {
         "current_price": "₹939",
         "original_price": "₹1,599",
@@ -87,7 +87,7 @@
     {
       "id": 4,
       "product_name": "Motorola g45 5G (Brilliant Blue, 128 GB)",
-      "image": "./images/-original-imah3xk892aj9gck.jpeg",
+      "image": "./-original-imah3xk892aj9gck.jpeg",
       "product_price": {
         "current_price": "₹11,999",
         "original_price": "₹14,999",
@@ -116,7 +116,7 @@
     {
       "id": 5,
       "product_name": "Samsung Galaxy F05 (Twilight Blue, 64 GB)",
-      "image": "./images/-original-imah56hkgehywn5b.jpeg",
+      "image": "./-original-imah56hkgehywn5b.jpeg",
       "product_price": {
         "current_price": "₹6,249",
         "original_price": "₹9,999",
@@ -145,7 +145,7 @@
     {
       "id": 6,
       "product_name": "realme Narzo 80 Lite 4G (Beach Gold, 64 GB)",
-      "image": "./images/narzo-80-lite-4g-rmx5313-realme-original-imahegxgdvbva7zf.jpeg",
+      "image": "./narzo-80-lite-4g-rmx5313-realme-original-imahegxgdvbva7zf.jpeg",
       "product_price": {
         "current_price": "₹7,233",
         "original_price": "₹8,999",
@@ -173,7 +173,7 @@
     {
       "id": 7,
       "product_name": "POCO C71 (Power Black, 128 GB)",
-      "image": "./images/-original-imahawgahmkbjxyj.jpeg",
+      "image": "./-original-imahawgahmkbjxyj.jpeg",
       "product_price": {
         "current_price": "₹6,999",
         "original_price": "₹9,999",
@@ -202,7 +202,7 @@
     {
       "id": 8,
       "product_name": "realme 15 Pro 5G(Flowing Silver, 256 GB)",
-      "image": "./images/vicky.webp",
+      "image": "./vicky.webp",
       "product_price": {
         "current_price": "₹33,999",
         "original_price": "₹37,999",
@@ -230,7 +230,7 @@
     {
       "id": 9,
       "product_name": "vivo T4 5G (Phantom Grey, 128 GB)",
-      "image": "./images/vivo.webp",
+      "image": "./vivo.webp",
       "product_price": {
         "current_price": "₹20,999",
         "original_price": "₹25,999",
@@ -259,7 +259,7 @@
     {
       "id": 10,
       "product_name": "REDMI A5 (Just Black, 64 GB)",
-      "image": "./images/-original-imahb56zdgszp7tg.jpeg",
+      "image": "./-original-imahb56zdgszp7tg.jpeg",
       "product_price": {
         "current_price": "₹6,499",
         "original_price": "₹8,999",
@@ -288,7 +288,7 @@
     {
       "id": 11,
       "product_name": "POCO C75 5G (Aqua Bliss, 64 GB)",
-      "image": "./images/-original-imahbr2cz5apcwze (1).jpeg",
+      "image": "./-original-imahbr2cz5apcwze (1).jpeg",
       "product_price": {
         "current_price": "₹7,699",
         "original_price": "₹10,999",
@@ -317,7 +317,7 @@
     {
       "id": 12,
       "product_name": "Samsung Guru Music 2 B310ED",
-      "image": "./images/guru-music-2-b310ed-guru-music-2-samsung-original-imahfyupkv.jpeg",
+      "image": "./guru-music-2-b310ed-guru-music-2-samsung-original-imahfyupkv.jpeg",
       "product_price": {
         "current_price": "₹898",
         "original_price": "₹1,999",
@@ -346,7 +346,7 @@
     {
       "id": 13,
       "product_name": "HOTLINE TURTLE",
-      "image": "./images/classic-turtle-classic-turtle-hotline-original-imahb9gz8jgyn.jpeg",
+      "image": "./classic-turtle-classic-turtle-hotline-original-imahb9gz8jgyn.jpeg",
       "product_price": {
         "current_price": "₹699",
         "original_price": "₹999",
@@ -375,7 +375,7 @@
     {
       "id": 14,
       "product_name": "Samsung Galaxy S25 Ultra",
-      "image": "./images/ultra.webp",
+      "image": "./ultra.webp",
       "product_price": {
         "current_price": "₹1,19,999",
         "original_price": "₹1,29,999",
@@ -405,7 +405,7 @@
     {
       "id": 15,
       "product_name": "MOTOROLA g35 5G (Midnight Black, 128 GB)",
-      "image": "./images/g35-5g-pb3h0000in-motorola-original-imah7c6ykgz5rtgv.jpeg",
+      "image": "./g35-5g-pb3h0000in-motorola-original-imah7c6ykgz5rtgv.jpeg",
       "product_price": {
         "current_price": "₹8,999",
         "original_price": "₹12,499",
@@ -435,7 +435,7 @@
     {
       "id": 16,
       "product_name": "Google Pixel 10 (Indigo, 256 GB)",
-      "image": "./images/google.webp",
+      "image": "./google.webp",
       "product_price": {
         "current_price": "₹79,999",
         "original_price": "₹1,10,999",
@@ -562,7 +562,7 @@
               ${
                 (price.current_price &&
                   parseInt(price.current_price.replace(/[^\d]/g, "")) > 500)
-                  ? '<span class="assured"><img src="./images/fa_9e47c1.png" alt="F-Assured"></span>'
+                  ? '<span class="assured"><img src="./fa_9e47c1.png" alt="F-Assured"></span>'
                   : ""
               }
             </div>
