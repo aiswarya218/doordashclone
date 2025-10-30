@@ -184,7 +184,6 @@ bind()
 //           functions,especially while dealing with many asynchronous tasks.
 // three states --  pending, fulfilled and rejected
 
-
 // Call By Value (Primitive)
     // This means a copy of the actual value is passed to the function's parameter. 
     // Any modifications made to the parameter inside the function will not affect the original variable outside the function. 
@@ -196,7 +195,7 @@ bind()
 //         modifyPrimitive(originalNumber);
 //         console.log("Outside function (primitive):", originalNumber);
 
-// Call By ReferenceError(Non-Primitive/Objects)  (pass by sharing)
+// Call By ReferenceError(Non-Primitive/Objects)  (pass by sharing) 
     //    a reference (or memory address) to the original object is passed to the function's parameter.
     //    Any modifications made to the properties of the object inside the function will affect the original object outside the function, because both the original variable and the function parameter point to the same object in memory.
     //    However, if you reassign the parameter to a completely new object inside the function, the original object will remain unchanged, as the parameter now points to a different memory location.

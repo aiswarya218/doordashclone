@@ -22,7 +22,7 @@ function calculateRemainder(dividend, divisor) {
  */
 function calculateAverage(arr) {
     if (!arr || arr.length === 0) {
-        return 0;
+        return 0; 
     }
     const sum = arr.reduce((acc, current) => acc + current, 0);
     return sum / arr.length;
@@ -251,9 +251,9 @@ function isPerfectNumber(num) {
 
     let sumOfDivisors = 1; // Start with 1 as a divisor (excluding the number itself)
 
-    for (let i = 2; i * i <= num; i++) {
+    for (let i = 2; i * i <= num; i++) { 
         if (num % i === 0) {
-            sumOfDivisors += i;
+            sumOfDivisors += i; 
             if (i * i !== num) {
                 sumOfDivisors += num / i;
             }
@@ -377,7 +377,6 @@ function findPrimesUpTo(limit) {
     isPrime[0] = isPrime[1] = false; // 0 and 1 are not prime
 
     for (let p = 2; p * p <= limit; p++) {
-        // If isPrime[p] is not changed, then it is a prime
         if (isPrime[p] === true) {
             // Update all multiples of p
             for (let i = p * p; i <= limit; i += p) {
@@ -456,15 +455,13 @@ function simplifyFraction(numerator, denominator) {
 function findRange(arr) {
     if (!arr || arr.length === 0) return null;
 
-    const min = Math.min(...arr);
+    const min = Math.min(...arr);  
     const max = Math.max(...arr);
 
     return max - min;
 }
 
-// ==============================================================================
-// Example Usage
-// ==============================================================================
+
 console.log("--- 1. Remainder (17 / 5):", calculateRemainder(17, 5)); // Output: 2
 
 console.log("--- 2. Average of [1, 2, 3, 4, 5]:", calculateAverage([1, 2, 3, 4, 5])); // Output: 3

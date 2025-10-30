@@ -1,21 +1,21 @@
 @font-face {
   font-family: "regular";
-  src: url(fonts/TTNorms-Regular.woff2) format("woff2");
+  src: url(./TTNorms-Regular.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "bold";
-  src: url(fonts/TTNorms-Bold.woff2) format("woff2");
+  src: url(./TTNorms-Bold.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "medium";
-  src: url(fonts/TTNorms-Medium.woff2) format("woff2");
+  src: url(./TTNorms-ExtraBold.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "temp";
-  src: url(fonts/TTNorms-ExtraBold.woff2) format("woff2");
+  src: url(./TTNorms-ExtraBold.woff2) format("woff2");
 }
 
 * {

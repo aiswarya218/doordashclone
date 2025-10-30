@@ -67,7 +67,7 @@
         "discount_percentage": "41% off"
       },
       "rating": {
-        "score": 4.1,
+        "score": 4.1, 
         "total_ratings": "1,71,013 Ratings",
         "total_reviews": "10,902 Reviews"
       },
