@@ -5,15 +5,15 @@
 }
 @font-face {
   font-family: 'bold';
-  src: url(fonts/eee1724e2e5a8ebd.woff2);
+  src: url(eee1724e2e5a8ebd.woff2);
 }
 @font-face {
   font-family: 'semi-bold';
-  src: url(fonts/276edd4275dda838.woff2);
+  src: url(276edd4275dda838.woff2);
 }
 @font-face {
   font-family: 'normal';
-  src: url(fonts/14f73a3f74611002.woff2);
+  src: url(14f73a3f74611002.woff2);
 }
 
 .top_body{

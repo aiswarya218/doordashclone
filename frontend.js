@@ -1103,7 +1103,7 @@
 
 // // Merging arrays
 // const arr3 = [4, 5, 6];
-// const mergedArray = [...arr1, ...arr3];
+// const mergedArray = [...arr1, ...arr3];  
 
 // // Copying an object
 // const obj1 = { a: 1, b: 2 };
