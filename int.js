@@ -1,30 +1,25 @@
-// This file contains 25 JavaScript programs solving various algorithmic and mathematical problems.
-
-const { DiSafari, DiCssdeck } = require("react-icons/di");
-const { SiK3S } = require("react-icons/si");
-
-// 1. Calculate the remainder of two numbers ---
+// 1. Calculate the remainder of two numbers
 function calculateRemainder(dividend, divisor) {
     if (divisor === 0) {
         throw new Error("Divisor cannot be zero.");
     }
     return dividend % divisor;
-} 
+}                          //check float in css
 
 // 2. Find the average of an array of numbers  
 function calculateAverage(arr) {
-    if (!arr || arr.length === 0) {  ggfff
+    if (!arr || arr.length === 0) {  
         return 0; 
     }
     const sum = arr.reduce((acc, current) => acc + current, 0);   
     return sum / arr.length;
 }
 
-// 3. Add two matrices ---
+// 3. Add two matrices
 function addMatrices(matrixA, matrixB) {
-    const rows = matrixA.length;
+    const rows = matrixA.length;   
     if (rows === 0) return [];
-    const cols = matrixA[0].length;
+    const cols = matrixA[0].length; 
 
     if (rows !== matrixB.length || cols !== matrixB[0].length) {
         throw new Error("Matrices must have the same dimensions for addition.");
@@ -407,3 +402,10 @@ const numbersDesc = [100, 20, 5, 42];
 numbersDesc.sort((a, b) => b - a);
 console.log(numbersDesc); // Output: [100, 42, 20, 5]
 
+function isEven(n) {
+    return !(n&1);
+}
+function isOdd(n) {
+    return !!(n&1);
+}
+console.log('Is 10 even no:, ${even(10)}');

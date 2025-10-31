@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Data Table</title>
+    <!-- Load Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better table visibility */
+        .table-container {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 font-sans">
+
+    <div class="w-full max-w-4xl bg-white rounded-xl shadow-2xl p-6 table-container">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-2 border-indigo-500 pb-2">
+            Team Performance Data
+        </h1>
+
+        <!-- HTML Table Structure -->
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-indigo-600">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider rounded-tl-lg">
+                        Name 
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                        Role
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
+                        Projects Completed
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider rounded-tr-lg">
+                        Hours Logged
+                    </th>
+                </tr>
+            </thead>
+            <!-- The table body will be populated by JavaScript -->
+            <tbody id="dataTableBody" class="bg-white divide-y divide-gray-200">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <p id="statusMessage" class="mt-4 text-sm text-gray-500"></p>
+    </div> 
+
+    <script>
+        // Sample data to be displayed in the table
+        const teamData = [
+            { name: "Alice Johnson", role: "Frontend Developer", projectsCompleted: 8, hoursLogged: 120 },
+            { name: "Bob Smith", role: "Backend Developer", projectsCompleted: 6, hoursLogged: 150 },
+            { name: "Charlie Brown", role: "UI/UX Designer", projectsCompleted: 10, hoursLogged: 95 },
+            { name: "Diana Prince", role: "DevOps Engineer", projectsCompleted: 4, hoursLogged: 160 },
+            { name: "Ethan Hunt", role: "Project Manager", projectsCompleted: 12, hoursLogged: 80 }
+        ];
+
+        /**
+         * Function to dynamically populate the HTML table with data.
+         */
+        function populateTable() {
+            const tableBody = document.getElementById('dataTableBody');
+            const statusMessage = document.getElementById('statusMessage');
+
+            if (!tableBody) {
+                statusMessage.textContent = "Error: Table body element not found.";
+                return;
+            }
+
+            // Clear any existing content
+            tableBody.innerHTML = '';
+
+            if (teamData.length === 0) {
+                statusMessage.textContent = "No data available to display.";
+                return;
+            }
+
+            // Iterate over the data array
+            teamData.forEach(member => {
+                // 1. Create a new table row element
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-indigo-50 transition duration-150 ease-in-out';
+
+                // Get all values from the object in the desired order
+                const values = [
+                    member.name,
+                    member.role,
+                    member.projectsCompleted,
+                    member.hoursLogged
+                ];
+
+                // 2. Iterate over the values and create table data cells (td)
+                values.forEach((value, index) => {
+                    const cell = document.createElement('td');
+                    cell.textContent = value;
+                    cell.className = 'px-6 py-4 whitespace-nowrap text-sm font-medium';
+
+                    // Apply conditional styling (e.g., for numbers)
+                    if (typeof value === 'number') {
+                        cell.className += ' text-right font-semibold text-indigo-700';
+                    } else {
+                        cell.className += ' text-gray-900';
+                    }
+
+                    // 3. Append the cell to the row
+                    row.appendChild(cell);
+                });
+
+                // 4. Append the row to the table body
+                tableBody.appendChild(row);
+            });
+
+            statusMessage.textContent = `Successfully loaded ${teamData.length} records into the table.`;
+        }
+
+        // Wait for the entire page (DOM) to load before running the script
+        window.onload = populateTable;
+
+    </script>
+</body>
+</html>

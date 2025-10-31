@@ -1,0 +1,646 @@
+
+/************ ✅ EXACT FLIPKART MOBILE VIEW ************/
+@media (max-width: 600px) {
+
+  body { background: #f1f3f6; }
+
+  /* Hide desktop header + nav */
+  .main-header,
+  .main-categories {
+    display: none;
+  }
+
+  /* Show mobile header */
+  .mobile-header {
+    display: block;
+  }
+
+  .mobile-categories {
+    display: flex;
+  }
+
+  .page-container {
+    min-width: auto;
+    padding: 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    display: none;
+  }
+
+  /* ✅ Filter + Sort Strip */
+  .mobile-filter-strip {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  /* ✅ PRODUCT CARD EXACT LIKE FLIPKART */
+  .product-card {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 4px;
+  }
+
+  .product-image {
+    width: 100px;
+    flex-shrink: 0;
+  }
+  .product-image img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .product-details {
+    flex: 1;
+    margin-left: 8px;
+  }
+
+  /* ✅ Title one-line ellipsis */
+  .product-details h3 {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    margin-bottom: 4px;
+  }
+
+  /* ✅ Show only first 2 specs */
+  .product-details p:nth-of-type(n+3) {
+    display: none;
+  }
+
+  /* ✅ Price Section */
+  .product-pricing {
+    text-align: right;
+    min-width: 70px;
+  }
+  .current-price {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .old-price {
+    font-size: 11px;
+    color: #777;
+    text-decoration: line-through;
+  }
+  .discount {
+    font-size: 11px;
+    color: #388E3C;
+    font-weight: 600;
+  }
+
+  /* ✅ Hide compare etc */
+  .compare-checkbox,
+  .add-to-compare,
+  .wishlist-icon,
+  .extra-links {
+    display: none !important;
+  }
+}
+/* ✅ REAL FLIPKART MOBILE VIEW */
+@media (max-width: 600px) {
+
+    body {
+        background: #f1f3f6;
+    }
+
+    .main-header {
+        display: none; /* Hide desktop header */
+    }
+
+    .mobile-header {
+        display: block; /* Show mobile header */
+    }
+
+    .main-categories {
+        display: none; /* Hide desktop menu */
+    }
+
+    .mobile-categories {
+        display: flex; /* Show icon menu */
+    }
+
+    .page-container {
+        min-width: auto;
+        padding: 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .filters-sidebar {
+        display: none;
+    }
+
+    .mobile-filter-strip {
+        display: flex;
+    }
+
+    .product-card {
+        flex-direction: row;
+        padding: 12px;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .product-image {
+        width: 120px;
+    }
+
+    .product-image img {
+        height: 120px;
+    }
+
+    .product-details h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .current-price {
+        font-size: 18px;
+    }
+}
+
+/************ ✅ ULTRA COMPACT FLIPKART MOBILE PRODUCT CARD ************/
+@media (max-width: 600px) {
+
+  .product-card {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start;
+    background: #fff;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    min-height: 90px;
+  }
+
+  .product-image {
+    width: 80px;
+    flex-shrink: 0;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  /* ✅ DETAILS */
+  .product-details {
+    flex: 1;
+    margin-left: 6px;
+  }
+
+  .product-details h3 {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+    margin-bottom: 2px;
+    line-height: 15px;
+  }
+
+  .rating-badge {
+    background: #388E3C;
+    padding: 1px 5px;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-right: 3px;
+  }
+
+  .product-details p:first-of-type {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 2px;
+    line-height: 13px;
+  }
+
+  /* ✅ ONLY show FIRST spec, hide others */
+  .product-details p:nth-of-type(n+2) {
+    display: none;
+  }
+
+  /* ✅ PRICING */
+  .product-pricing {
+    min-width: 62px;
+    text-align: right;
+  }
+
+  .current-price {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  .old-price {
+    font-size: 10px;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .discount {
+    font-size: 10px;
+    color: #388E3C;
+    font-weight: 600;
+  }
+
+  /* ✅ ASSURED LOGO SMALL */
+  .assured-badge img,
+  .product-pricing img {
+    width: 38px !important;      /* smaller assured */
+    height: auto;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+
+  /* ✅ Remove bullets & long specs */
+  .product-details ul,
+  .product-details li {
+    display: none !important;
+  }
+
+  /* ✅ Hide compare, wishlist, etc */
+  .add-to-compare,
+  .compare-checkbox,
+  .wishlist-icon,
+  .extra-links {
+    display: none !important;
+  }
+}
+
+/************ ✅ ULTRA COMPACT PRICE + ASSURED (Flipkart exact) ************/
+@media (max-width: 600px) {
+
+  .product-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 70px;
+    padding-left: 4px;
+    text-align: right;
+    line-height: 12px;
+  }
+
+  /* ✅ PRICE + ASSURED inline */
+  .price-row {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .current-price {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  /* ✅ Smaller assured */
+  .price-row img,
+  .assured,
+  .assured-badge img {
+    width: 34px !important;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  /* ✅ Old price + discount */
+  .price-old-discount {
+    font-size: 10px;
+    color: #999;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    margin-right: 4px;
+  }
+
+  .discount {
+    color: #388E3C;
+    font-weight: 600;
+  }
+}
+/* ✅ MOBILE VIEW — width below 600px */
+@media (max-width: 600px) {
+
+  .main-header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .login-btn {
+    padding: 5px 20px;
+  }
+
+  .main-categories ul {
+    display: none; /* Hide large menu on phones */
+  }
+
+  .page-container {
+    min-width: auto;
+    padding: 5px;
+  }
+
+  .filters-sidebar {
+    display: none; /* Hide sidebar on phones */
+  }
+
+  .product-card {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .product-image img {
+    height: 160px;
+  }
+
+  .product-details h3 {
+    font-size: 16px;
+  }
+
+  .current-price {
+    font-size: 22px;
+  }
+}
+/* ✅ MOBILE LIKE REAL FLIPKART */
+@media (max-width: 600px) {
+
+  .main-header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: row;
+    padding: 0 12px;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .login-btn,
+  .auth-nav,
+  .seller-btn,
+  .more-btn {
+    display: none;
+  }
+
+  /* ✅ show small icons */
+  .mobile-icons {
+    display: flex;
+    gap: 18px;
+  }
+
+  .mobile-icons i {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  /* ✅ category turns scrollable */
+  .main-categories ul {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .main-categories ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-categories li a {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* ✅ hide mega dropdowns */
+  .dropdown-menu {
+    display: none !important;
+  }
+
+  /* ✅ PAGE */
+  .page-container {
+    min-width: auto;
+    padding: 5px;
+  }
+
+  .filters-sidebar {
+    display: none;
+  }
+
+  .mobile-filter-bar {
+    display: flex;
+  }
+
+  /* ✅ PRODUCT CARD MOBILE LOOK */
+  .product-card {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .product-image {
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-image img {
+    height: 180px;
+    width: auto;
+    margin: auto;
+  }
+
+  .product-details, .product-pricing {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .product-details h3 {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .current-price {
+    font-size: 20px;
+  }
+}
+/* ✅ Force details to right of image on mobile */
+@media (max-width: 600px) {
+  .product-card {
+    display: flex;
+    flex-direction: row !important;  /* force horizontal */
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .product-image {
+    width: 110px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+  }
+
+  .product-details {
+    flex: 1;
+    padding-left: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .compare-checkbox, 
+  .add-to-compare {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+
+  /* ✅ Reduce specs - show only first 2 lines */
+  .product-details p:nth-of-type(n+3) {
+    display: none;
+  }
+
+  /* ✅ Hide compare checkbox and unwanted elements */
+  .compare-checkbox,
+  .add-to-compare,
+  .spec-full-list,
+  .desktop-extra-info {
+    display: none !important;
+  }
+
+  /* ✅ Make title single line with ... */
+  .product-details h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 160px;
+  }
+
+}
+
+
+/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */
+
+
+
+/* ✅ TABLET RESPONSIVE */
+@media (max-width: 992px) {
+
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .search-bar {
+    width: 350px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .product-results {
+    order: 1;
+  }
+
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 150px;
+    margin: auto;
+  }
+
+  .product-details, .product-pricing {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+    /* ✅ TABLET VIEW — width below 992px */
+@media (max-width: 992px) {
+
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .search-bar {
+    width: 350px;
+  }
+
+  .auth-nav {
+    gap: 10px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    order: 2;
+  }
+
+  .product-results {
+    order: 1;
+  }
+
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 150px;
+    margin: auto;
+  }
+
+  .product-details, .product-pricing {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .main-categories ul {
+    flex-wrap: wrap;
+  }
+}

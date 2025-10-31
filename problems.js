@@ -1,15 +1,5 @@
 //  1. Calculate the remainder of two numbers
 
-const { BiBadge } = require("react-icons/bi");
-const { DiDart, DiSafari } = require("react-icons/di");
-const { FaDAndD } = require("react-icons/fa");
-const { GiKingJuMask } = require("react-icons/gi");
-const { LiaDiceD6Solid, LiaAdSolid } = require("react-icons/lia");
-const { LuSailboat, LuSunSnow, LuScissorsLineDashed, LuLayoutList, LuLoader } = require("react-icons/lu");
-const { MdMacroOff } = require("react-icons/md");
-const { SiD, SiSsrn, SiSouthwestairlines, Si1Dot1Dot1Dot1, SiJinja, SiD3Dotjs, SiDsautomobiles } = require("react-icons/si");
-const { TbNavigationNorth } = require("react-icons/tb");
-
 function calculateRemainder(dividend, divisor) {
     if (divisor === 0) {
         throw new Error("Divisor cannot be zero.");
@@ -45,10 +35,9 @@ function calculateAverage(arr) {
     }
 
     let sum = 0;
-    let length = 0; // Manual length calculation (though arr.length is generally allowed)
+    let length = 0;
 
-    // Manual summation
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) { 
         sum += arr[i];
         length++;
     }
@@ -97,7 +86,7 @@ function isDiagonalMatrix(matrix) {
         // Ensure it is a square matrix
         if (matrix[i].length !== n) {
             return false;
-        }
+        } 
         for (let j = 0; j < n; j++) {
             // Check non-diagonal elements
             if (i !== j && matrix[i][j] !== 0) {
@@ -120,14 +109,13 @@ console.log("Is Diagonal", isDiagonalMatrix(identityMatrix));
 function isIdentityMatrix(matrix) {
     const n = matrix.length;
     for (let i = 0; i < n; i++) {
-        if (matrix[i].length !== n) {
-            // console.warn("Matrix is not square.");
+        if (matrix[i].length !== n) { 
             return false;
         }
         for (let j = 0; j < n; j++) {
             if (i === j) {
                 // Diagonal elements must be 1
-                if (matrix[i][j] !== 1) return false;
+                if (matrix[i][j] !== 1) return false; 
             } else {
                 // Non-diagonal elements must be 0
                 if (matrix[i][j] !== 0) return false;
@@ -212,7 +200,6 @@ function isPerfectSquare(num) {
     let i = 1;
     while (true) {
         // Manual check for i * i > num
-        // Note: For large numbers, i*i might overflow standard JS number precision.
         if (i > num / i) {
             return false;
         }
@@ -220,8 +207,7 @@ function isPerfectSquare(num) {
         if (i * i === num) {
             return true;
         }
-
-        i++;
+      i++;
     }
 }
 
@@ -276,7 +262,7 @@ function isArmstrongNumber(num) {
     }
 
     return sum === num;
-}
+}  
 
 // 14. Check whether a given number is a perfect number or not
 
@@ -402,8 +388,9 @@ function countVowels(str) {
             char === 'e' || char === 'E' ||
             char === 'i' || char === 'I' ||
             char === 'o' || char === 'O' ||
-            char === 'u' || char === 'U'
-        ) {
+            char === 'u' || char === 'U' 
+        ) 
+        {
             count++;
         }
     }
@@ -453,7 +440,7 @@ function findPrimesUpTo(limit) {
     for (let i = 2; i <= limit; i++) {
         if (isPrime[i]) {
             primes[primeIndex] = i;
-            primeIndex++;
+            primeIndex++;  
         }
     }
     return primes;
@@ -463,9 +450,9 @@ function findPrimesUpTo(limit) {
 // 22. Remove duplicates in an array of numbers
 
 function removeDuplicates(arr) {
-    const seen = {};
-    const result = [];
-    let resultIndex = 0;
+    const seen = {};   
+    const result = []; 
+    let resultIndex = 0;   
 
     for (let i = 0; i < arr.length; i++) {
         const item = arr[i];
@@ -492,7 +479,7 @@ function isAlphaNumeric(char) {
     // A-Z
     if (code >= 65 && code <= 90) return true;
     // a-z
-    if (code >= 97 && code <= 122) return true;
+    if (code >= 97 && code <= 122) return true;         
 
     return false;
 }
@@ -583,9 +570,9 @@ function findRange(arr) {
         const current = arr[i];
 
         // Manual comparison for max
-        if (current > maxVal) {
-            maxVal = current;
-        }
+        if (current > maxVal) { 
+            maxVal = current; 
+        } 
 
         // Manual comparison for min
         if (current < minVal) {
@@ -648,3 +635,84 @@ if (index !== -1) {
 const nonExistentTarget = 10;
 const notFoundIndex = binarySearch(sortedArray, nonExistentTarget);
 console.log(`Target ${nonExistentTarget} found at index ${notFoundIndex}.`); // Output: Target 10 found at index -1.
+
+
+//Flatten an array
+const nestedArray = [1, [2, 3], [4, 5]];
+
+// The empty array's concat method is called with the spread array contents
+const flatArray = [].concat(...nestedArray);
+
+// Result: [1, 2, 3, 4, 5]
+
+
+//Swap two variables
+let a = 5;
+let b = 10;
+
+[a, b] = [b, a]; // Swaps the values
+
+console.log(`a: ${a}, b: ${b}`); // Output: a: 10, b: 5
+
+
+//Swap two arrays
+let arrayA = [1, 2, 3];
+let arrayB = ['a', 'b', 'c', 'd'];
+
+console.log('Before Swap:');
+console.log('arrayA:', arrayA); // Output: arrayA: [1, 2, 3]
+console.log('arrayB:', arrayB); // Output: arrayB: ['a', 'b', 'c', 'd']
+
+// The Swap
+[arrayA, arrayB] = [arrayB, arrayA];
+
+console.log('\nAfter Swap:');
+console.log('arrayA:', arrayA); // Output: arrayA: ['a', 'b', 'c', 'd']
+console.log('arrayB:', arrayB); // Output: arrayB: [1, 2, 3]
+
+//To empty an object
+function isObjectEmptyManual(obj) {
+  // Use hasOwnProperty to ensure we only count the object's own properties
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      return false; // Found at least one property
+    }
+  }
+  return true; // No properties found
+}
+
+// --- Example ---
+const obj = {};
+console.log(isObjectEmptyManual(obj)); // Output: true
+
+//flatten without builtin fns
+
+function flattenIterative(arr) {
+  const flattened = [];
+  // Create a copy of the array and reverse it to use it as a stack (LIFO)
+  const stack = [...arr].reverse(); 
+
+  // While the stack is not empty
+  while (stack.length) {
+    // Pop the last element (which was the first element of the original array)
+    const element = stack.pop();
+
+    // Check if the element is an array
+    if (Array.isArray(element)) {
+      // If it's an array, push its elements onto the stack in reverse order
+      // so they are processed in the correct order (left-to-right).
+      stack.push(...element.reverse());
+    } else {
+      // If it's a single value, push it to the result array
+      flattened.push(element);
+    }
+  }
+
+  return flattened;
+}
+
+const nestArray = [1, [2, 3], [4, [5, [6]]]];
+const flatedArray = flattenIterative(nestedArray);
+
+console.log(flatedArray);
+// Output: [1, 2, 3, 4, 5, 6]
